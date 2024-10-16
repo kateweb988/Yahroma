@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="date=no">
+	<meta name="format-detection" content="address=no">
+	<meta name="format-detection" content="email=no">
+	<!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" /> -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+
+	<title>ЯХРОМА</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<!-- Favicon -->
+	<!-- <link rel="icon" href="img/fav.png" type="image/x-icon">
+	<link rel="shortcut icon" href="img/fav.png" type="image/x-icon"> -->
+	<!-- OG -->
+	<meta property="og:locale" content="ru-Ru">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="">
+	<meta property="og:description" content="">
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/vjik/arcticModal@master/arcticmodal/jquery.arcticmodal.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+
+</head>
+
+<body>
+	<div class="body-wrap page">
+		<div class="socials">
+			<div class="menu2">
+				<a href="#" target="_blank">
+					<img src="img/a1.svg" alt="">
+				</a>
+				<a href="#" target="_blank">
+					<img src="img/a2.svg" alt="">
+				</a>
+				<a href="#">
+					<img src="img/a3.svg" alt="">
+				</a>
+			</div>
+			<div class="menu-btn2">
+				<img src="img/menu2.svg" alt="" class="per1">
+				<img src="img/close2.svg" alt="" class="per2">
+			</div>
+		</div>
+		<header class="header" id="header">
+			<nav class="nav">
+				<div class="container">
+					<div class="nav__box q">
+						<div class="nav__info q">
+							<a href="main.html" class="nav__logo">
+								<img src="img/logo.svg" alt="">
+							</a>
+							<ul class="nav__list">
+								<li>
+									<a href="main.html">
+										Главная
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Планировки
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Способы покупки
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Панорама
+									</a>
+								</li>
+								<li class="active">
+									<a href="contacts.html">
+										Контакты
+									</a>
+								</li>
+							</ul>
+						</div>
+						<a href="tel:+79999999999" class="nav__tel">
+							<img src="img/tel.svg" alt=""> +7 999 999 99 99
+						</a>
+						<div class="menu-btn">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+					</div>
+					<div class="menu">
+						<img src="img/fig1.svg" alt="" class="menu__bg">
+						<div class="menu__top">
+							<img src="img/logo.svg" alt="" class="menu__logo">
+						</div>
+						<a href="tel:+79999999999" class="nav__tel">
+							<img src="img/tel.svg" alt=""> +7 999 999 99 99
+						</a>
+						<ul>
+							<li>
+								<a href="main.html">
+									ГЛАВНАЯ
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									ПЛАНИРОВКИ
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									СПОСОБЫ ПОКУПКИ
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									ПАНОРАМА
+								</a>
+							</li>
+							<li class="active">
+								<a href="contacts.html">
+									КОНТАКТЫ
+								</a>
+							</li>
+						</ul>
+						<div class="footer__socials q">
+							<a href="#" target="_blank">
+								<img src="img/social1.svg" alt="" class="svg">
+							</a>
+							<a href="#" target="_blank">
+								<img src="img/social1.svg" alt="" class="svg">
+							</a>
+							<a href="#" target="_blank">
+								<img src="img/social1.svg" alt="" class="svg">
+							</a>
+							<a href="#" target="_blank">
+								<img src="img/social1.svg" alt="" class="svg">
+							</a>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<section class="section cont" id="cont">
+			<div class="container">
+				<div class="contacts__box q">
+					<div id="map"></div>
+					<div class="contacts__content">
+						<div class="contacts__row contacts__row_1 q">
+							<div class="contacts__item">
+								<span>
+									Адрес офиса
+								</span>
+								<p>
+									Москва, Большая <br> Серпуховская, д 35, стр 8
+								</p>
+							</div>
+							<div class="contacts__item">
+								<span>
+									График работы
+								</span>
+								<p>
+									Пн - Пт 09:00 — 18:00 <br> Сб - Вс — выходной
+								</p>
+							</div>
+						</div>
+						<a href="#" class="cont__btn btn">
+							Построить маршрут <div> <img src="img/right.svg" alt="" class="svg"></div>
+						</a>
+						<h1>
+							КОНТАКТЫ
+						</h1>
+						<div class="footer__socials q">
+							<a href="#" target="_blank">
+								<img src="img/social1.svg" alt="" class="svg">
+							</a>
+							<a href="#" target="_blank">
+								<img src="img/social1.svg" alt="" class="svg">
+							</a>
+							<a href="#" target="_blank">
+								<img src="img/social1.svg" alt="" class="svg">
+							</a>
+							<a href="#" target="_blank">
+								<img src="img/social1.svg" alt="" class="svg">
+							</a>
+						</div>
+						<div class="contacts__row q">
+							<div class="contacts__item">
+								<span>
+									Номер телефона
+								</span>
+								<a href="tel:+79999999999">
+									+7 (999) 999 99-99
+								</a>
+							</div>
+							<div class="contacts__item">
+								<span>
+									Почта
+								</span>
+								<a href="mailto:example@domain.ru">
+									example@domain.ru
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="news__top">
+				<div class="container">
+					<div class="news-form">
+						<img src="img/bg3.png" alt="" class="news-form__bg">
+						<div class="news-form__content">
+							<p class="news-form__title">
+								РАССКАЖЕМ О ДОМЕ <br> И ЗАПИШЕМ НА ПРОСМОТР
+							</p>
+							<p class="news-form__text">
+								Чтобы избежать сожалений в будущем, сделайте шаг к своему дому уже сегодня. Откройте новую главу
+								вашей жизни, где каждый день будет наполняться радостью и комфортом
+							</p>
+						</div>
+						<div class="news-form__wrap">
+							<form action="success.php" class="news__form myForm js-form" id="popupResult" method="post">
+								<input type="text" placeholder="Имя" name="name" class="form__field" required="">
+								<input type="tel" placeholder="Номер телефона" name="tel" class="tel form__field" required="">
+								<div class="news-form__check">
+									<input class="form-check-input custom-checkbox" type="checkbox" name="t2" id="form2"
+										value="Хочу">
+									<label class="form-check-label " for="form2">
+										Хочу онлайн просмотр
+									</label>
+								</div>
+								<button type="submit" class="btn btn_2" data-submit>
+									Отправить <div> <img src="img/arr.svg" alt="" class="svg"> </div>
+								</button>
+								<p class="footer__policy">
+									Нажимая кнопку, вы подтверждаете свое согласие <br> на <a href="#"> обработку
+										персональных данных</a>
+								</p>
+							</form>
+							<div class="popup" id="thankYouPopup">
+								<div class="pop__top">
+									<img src="img/pop.svg" alt="" class="pop__fig">
+									<p class="pop__title">
+										Спасибо за заявку!
+									</p>
+									<p class="pop__text">
+										Наш менеджер свяжется с вами <br> в ближайшее время
+									</p>
+									<a href="#" class="pop__link">
+										Отправить повторно
+									</a>
+									<p class="pop__time">
+										это окно закроется автоматически
+									</p>
+								</div>
+								<div class="pop__mob">
+									<img src="img/thank.svg" alt="">
+									<div class="pop__content">
+										<span>
+											Спасибо за заявку!
+										</span>
+										<p>
+											Наш менеджер свяжется с вами <br> в ближайшее время
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer class="footer" id="footer">
+			<div class="container">
+				<div class="footer__box q">
+					<div class="footer__left">
+						<div class="footer__area">
+							<img src="img/f-logo.svg" alt="" class="footer__logo">
+							<div class="footer__socials q">
+								<a href="#" target="_blank">
+									<img src="img/social1.svg" alt="" class="svg">
+								</a>
+								<a href="#" target="_blank">
+									<img src="img/social1.svg" alt="" class="svg">
+								</a>
+								<a href="#" target="_blank">
+									<img src="img/social1.svg" alt="" class="svg">
+								</a>
+								<a href="#" target="_blank">
+									<img src="img/social1.svg" alt="" class="svg">
+								</a>
+							</div>
+						</div>
+						<div class="footer__per">
+							<div class="footer__info">
+								<p>
+									© 2024 Название компании
+								</p>
+								<a href="#">
+									Политика конфиденциальности
+								</a>
+								<a href="#">
+									Обработка персональных данных
+								</a>
+							</div>
+							<a href="https://gasfort.ru/" target="_blank" class="footer__com">
+								<p>
+									Разработчик
+								</p>
+								<img src="img/com.svg" alt="">
+							</a>
+						</div>
+					</div>
+					<div class="footer__form">
+						<p class="footer__name">
+							Оставить заявку на звонок
+						</p>
+						<form action="#">
+							<input type="text" placeholder="Имя">
+							<input type="tel" placeholder="+7 (___) ___ __ __" class="tel">
+							<button class="btn btn_2">
+								Отправить <div> <img src="img/right.svg" alt="" class="svg"> </div>
+							</button>
+							<p class="footer__policy">
+								Нажимая кнопку, вы подтверждаете свое согласие <br class="mob"> на <a href="#"> обработку
+									персональных данных</a>
+							</p>
+						</form>
+					</div>
+					<div class="footer__content q">
+						<div class="footer__item">
+							<p class="footer__name">
+								Навигация
+							</p>
+							<ul>
+								<li>
+									<a href="#">
+										Главная
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Планировки
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Способы покупки
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Панорама
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Контакты
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Документы
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="footer__item">
+							<p class="footer__name">
+								Планировки
+							</p>
+							<ul>
+								<li>
+									<a href="#">
+										Дом 150 м²
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Дом 200 м²
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Дом 250 м²
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="footer__item">
+							<p class="footer__name">
+								Отдел продаж
+							</p>
+							<div class="footer__el">
+								<span>
+									Тел:
+								</span>
+								<a href="tel:+79999999999">
+									+7 (999) 999 99-99
+								</a>
+							</div>
+							<div class="footer__el">
+								<span>
+									Адрес:
+								</span>
+								<p>
+									Москва, Большая Серпуховская, д 35, стр 8
+								</p>
+							</div>
+							<div class="footer__el">
+								<span>
+									График работы
+								</span>
+								<p>
+									Пн - Пт 09:00 — 18:00 <br> Сб - Вс — выходной
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script type="text/javascript">
+			ymaps.ready(init);
+
+			function init() {
+				var myMap = new ymaps.Map("map", {
+					// Центр карты, указываем коордианты
+					center: [55.718496, 37.627301],
+					// Масштаб, тут все просто
+					zoom: 14,
+					// Отключаем все элементы управления
+					controls: []
+				});
+
+				var myGeoObjects = [];
+
+				// Наша метка, указываем коордианты
+				myGeoObjects = new ymaps.Placemark([55.718496, 37.627301], {
+					balloonContentBody: 'Yahroma',
+				}, {
+					iconLayout: 'default#image',
+					// Путь до нашей картинки
+					iconImageHref: 'img/map.svg',
+					// Размер по ширине и высоте
+					iconImageSize: [136, 136],
+					// Смещение левого верхнего угла иконки относительно
+					// её «ножки» (точки привязки).
+					iconImageOffset: [-35, -35]
+				});
+
+				var clusterer = new ymaps.Clusterer({
+					clusterDisableClickZoom: false,
+					clusterOpenBalloonOnClick: false,
+				});
+
+				clusterer.add(myGeoObjects);
+				myMap.geoObjects.add(clusterer);
+				// Отлючаем возможность изменения масштаба
+				myMap.behaviors.disable('scrollZoom');
+
+			}
+		</script>
+
+		<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js?ver=5.1"></script>
+		<script src="js/all.js"></script>
+		<script src="https://cdn.jsdelivr.net/gh/vjik/arcticModal@master/arcticmodal/jquery.arcticmodal.js"></script>
+		<!-- Подключен файл-валидатор, для проверки формы на заполненность  -->
+		<script type="text/javascript"
+			src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.js"></script>
+</body>
+
+</html>

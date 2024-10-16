@@ -1,0 +1,2728 @@
+input::-webkit-input-placeholder 
+   color: rgba(240, 235, 230, 0.8) !important
+input::-moz-placeholder
+   color: rgba(240, 235, 230, 0.8) !important
+input:-ms-input-placeholder 
+   color: rgba(240, 235, 230, 0.8) !important
+input:-moz-placeholder 
+   color: rgba(240, 235, 230, 0.8) !important
+.menu-btn, .menu
+   display: none
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after, .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after
+   display: none
+.custom-checkbox 
+   position: absolute
+   z-index: -1
+   opacity: 0
+.custom-checkbox+label 
+   display: flex
+   align-items: center
+   user-select: none
+   font-weight: 400
+   font-size: 16px
+   line-height: 130%
+   color: #494949
+   cursor: pointer
+   &:hover
+      &:before 
+         border: 1px solid $green
+.custom-checkbox+label::before
+   content: ''
+   display: inline-block
+   flex-shrink: 0
+   display: flex
+   flex-grow: 0
+   background-repeat: no-repeat
+   background-position: center center
+   background-size: 8px
+   background: #FFFFFF
+   flex: 1 0 auto
+   transition: 0.2s
+   width: 20px
+   height: 20px
+   border-radius: 5px
+   box-sizing: border-box
+   max-width: 20px
+   border: 1px solid #e9e9e9
+   background-color: #ffffff
+   max-width: 20px
+   margin-right: 11px
+.custom-checkbox:checked+label::before 
+   background: url(/img/check2.png) no-repeat center center
+.swiper-pagination
+   display: flex
+   justify-content: center
+   bottom: 19px
+   position: absolute
+   z-index: 2
+.swiper-pagination-bullet
+   width: 52px
+   height: 2px
+   background-color: #ffffff
+   opacity: 0.2
+.swiper-pagination-bullet-active
+   background-color: $green !important
+   opacity: 1
+.tabs__pane 
+   display: none
+.tabs__pane_show 
+   display: block
+.tabs__btn_active
+   color: #20252d !important
+   position: relative
+.swiper-button-next, .swiper-button-prev
+   z-index: 9
+.swiper-button-disabled
+   opacity: 0
+   pointer-events: none
+.bread 
+   display: flex
+   align-items: center
+   justify-content: flex-start
+   margin-bottom: 28px
+   flex-wrap: wrap
+   a 
+      color: rgba(32, 32, 32, 0.5)
+      font-size: 14px
+      font-weight: 500
+      line-height: 18px
+      &:after 
+         content: "/"
+         display: inline-block
+         color: rgba(32, 32, 32, 0.5) !important
+         font-size: 14px
+         font-weight: 500
+         line-height: 18px
+         margin: 0 10px
+      &:last-child
+         color: rgb(32, 32, 32)
+         &:after 
+            display: none
+      &:hover 
+         color: $green
+.mob 
+   display: none
+/* SELECT */
+.selectCF
+   margin: 0
+   padding: 0
+   display: inline-block
+   position: relative
+   color: black
+   display: flex
+   align-items: center
+   justify-content: center
+   transition: 0.5s
+   width: max-content
+   height: auto
+   background: transparent
+.selectCF li
+   list-style: none
+   cursor: pointer
+   perspective: 900px
+   -webkit-perspective: 900px
+   text-align: left
+   width: 100%
+   height: 100%
+   max-height: 100%
+   box-sizing: border-box
+.selectCF > li
+   position: relative
+   border: none
+.selectCF span
+   display: flex
+   height: auto
+   line-height: 100%
+   color: #888888
+   z-index: 1
+   align-items: center
+.selectCF .arrowCF
+   transition: .3s
+   -webkit-transition: .3s
+   width: 7px
+   height: 5px
+   text-align: center
+   vertical-align: top
+   background: url(/img/down-arrow.png) no-repeat !important
+   position: absolute
+   right: -16px
+   top: 8px
+.selectCF .titleCF
+   font-size: 16px
+   font-weight: 400
+   text-overflow: ellipsis
+   color: #000000 !important
+   white-space: nowrap
+   width: max-content !important
+   height: max-content !important
+   box-sizing: border-box
+   background: transparent !important
+.selectCF .searchCF
+   position: absolute
+   top: 3px
+   right: 0
+   z-index: -1
+@keyframes searchActive 
+   from
+      transform: rotateY(180deg) 
+   to
+      transform: rotateY(0deg)
+@-moz-keyframes searchActive 
+   from
+      transform: rotateY(180deg) 
+   to
+      transform: rotateY(0deg)
+@-webkit-keyframes searchActive 
+   from
+      -webkit-transform: rotateY(180deg) 
+   to
+      -webkit-transform: rotateY(0deg)
+.searchActive .searchCF
+   z-index: 1
+   animation: searchActive 0.3s alternate 1
+   -moz-animation: searchActive 0.3s alternate 1
+   -webkit-animation: searchActive 0.3s alternate 1
+.searchActive .titleCF
+   opacity: 0
+.selectCF .searchCF input
+   border: none !important
+   padding: 0
+   margin: 0
+   width: auto
+   height: auto
+   background: transparent
+.selectCF .searchCF input:active, .selectCF .searchCF input:focus
+   box-shadow: none !important
+   border: none !important
+   outline: none !important
+.selectCF li ul
+   display: none
+   position: absolute
+   top: 100%
+   left: 1px
+   width: 100%
+   background: grey
+   max-height: 255px
+   overflow-y: auto
+   transition: .2s
+   -webkit-transition: .2s
+   z-index: 2
+   box-sizing: border-box
+   padding-bottom: 10px
+   border-top: none
+.selectCF li ul li
+   padding: 9px 0 9px 10px
+   transition: .2s
+   -webkit-transition: .2s
+   overflow: hidden
+   text-overflow: ellipsis
+   white-space: nowrap
+   border-top: none
+   box-sizing: border-box
+   height: 40px
+   font-weight: 500
+   font-size: 16px
+   line-height: 22px
+   color: #FAFAFF
+   &:last-child
+      border-radius: 0px 0px 5px 5px
+      padding-bottom: 10px
+   &:hover 
+      color: $green
+.onCF .arrowCF
+   transform: rotate(180deg)
+   -webkit-transform: rotate(180deg)
+@-moz-keyframes effect1 
+   from
+      transform: translateY(15px)
+      opacity: 0
+   to
+      transform: translateY(0px)
+      opacity: s1
+@-webkit-keyframes effect1 
+   from
+      -webkit-transform: translateY(15px) 
+      opacity: 0
+   to
+      -webkit-transform: translateY(0px)
+      opacity: 1
+.onCF li ul
+   display: block
+   position: absolute
+   -moz-animation: effect1 0.3s alternate 1
+   -webkit-animation: effect1 0.3s alternate 1
+   left: -6.55px
+   top: 22px
+   border-radius: 0 0 4px 4px
+   width: 100%
+   min-width: max-content
+   padding-right: 10px
+ul.info li, #event-change
+   color: #FFF
+ul.info
+   padding: 0
+   display: none
+ul.info li
+   display: inline-block
+   border-radius: 5px
+   padding: 0 5px
+.accordeon, .accordeon2
+   padding: 5px 0 30px
+   border-bottom: 1px solid #ececec
+   margin-bottom: 26px
+   width: 100%
+.accordeon__item 
+   width: 100%
+   list-style-type: none
+.accordeon__item:first-child .accordeon__button
+   margin-top: 0
+.accordeon__button, .accordeon__button2
+   width: 100%
+   text-align: left
+   border: none
+   cursor: pointer
+   position: relative
+   transition: all 0.5s ease
+   font-size: 17px
+   font-weight: 700
+   color: #282828
+   display: flex
+   justify-content: space-between
+.accordeon__button:hover, .accordeon__button2:hover
+   color: $green
+.accordeon__button:after, .accordeon__button2:after
+   content: ""
+   position: absolute
+   right: 0px
+   background: url(/img/down-arrow.png) no-repeat !important
+   width: 7px
+   left: inherit
+   height: 5px
+   top: 8px
+   bottom: inherit
+   margin-bottom: -20px
+   transition: all 0.5s ease
+.accordeon__button.active:after, .accordeon__button2.active:after
+   content: ""
+   position: absolute
+   right: 0px
+   background: url(/img/down-arrow.png) no-repeat !important
+   width: 7px
+   left: inherit
+   height: 5px
+   bottom: 30%
+   margin-bottom: -20px
+   transition: all 0.5s ease
+   transform: rotate(180deg)
+   -webkit-transform: rotate(180deg)
+.accordeon__panel, .accordeon__panel2
+   max-height: 0
+   overflow: hidden
+   margin-left: 0
+   transition: all 0.5s ease
+.panel__text, .panel__text2
+   list-style-type: none
+   padding-top: 0px
+   max-width: 688px
+   margin-top: 30px
+.panel__info
+   font-weight: 300
+   font-size: 16px
+   line-height: 140%
+   margin-bottom: 20px
+   &:last-child
+      margin-bottom: 0
+.nav 
+   border-bottom: 1px solid rgba(240, 235, 230, 0.2)
+   position: relative
+   z-index: 2
+   &__box 
+      align-items: center
+      justify-content: space-between
+   &__info 
+      align-items: center
+   &__logo 
+      margin-right: 80px
+      display: block
+      img 
+         width: 100%
+         object-fit: contain 
+   &__list 
+      display: flex
+      flex-wrap: wrap 
+      position: relative
+      top: 1px
+      li 
+         margin-right: 40px
+         padding: 22px 0
+         a 
+            color: rgba(240, 235, 230, 0.8)
+            font-size: 16px
+            font-weight: 400
+            line-height: 18px
+            &:hover 
+               color: rgb(240, 235, 230)
+         &:last-child
+            margin-right: 0
+         &.active
+            border-bottom: 2px solid rgb(240, 235, 230) 
+            a 
+              color: rgb(240, 235, 230) 
+   &__tel 
+      display: flex
+      align-items: center
+      color: rgb(240, 235, 230)
+      font-size: 16px
+      font-weight: 400
+      line-height: 18px
+      img 
+         margin-right: 10px
+      &:hover 
+         opacity: 0.8
+.header
+   position: relative
+   &:after 
+      display: block
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      content: ""
+      background: rgba(0, 0, 0, 0.4)
+   &__bg 
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      z-index: -1
+      object-fit: cover
+   &__wrap 
+      padding: 300px 0 64px
+      position: relative
+      z-index: 3
+      p 
+         margin-top: 32px
+         color: rgb(240, 235, 230)
+         font-size: 24px
+         font-weight: 400
+         line-height: 26px
+.socials 
+   position: fixed
+   bottom: 5% 
+   right: 5%
+   z-index: 5
+.menu-btn2 
+   width: 48px
+   height: 48px
+   display: flex
+   justify-content: center
+   align-items: center
+   border: 1px solid rgba(240, 235, 230, 0.2)
+   border-radius: 100px
+   background: rgb(43, 87, 52)
+   transition: 0.5s 
+   cursor: pointer
+   .per2 
+      display: none
+   &.active 
+      .per2 
+         display: block
+      .per1 
+         display: none
+   &:hover 
+      background: rgb(32, 66, 39)
+.menu2
+   opacity: 0
+   pointer-events: none
+   transition: 0.5s 
+   transform: translatey(-10%)
+   a 
+      display: flex
+      justify-content: center
+      align-items: center 
+      margin-bottom: 4px
+      width: 48px
+      height: 48px
+      border: 1px solid rgba(240, 235, 230, 0.2)
+      border-radius: 100px
+      background: rgba(27, 30, 33, 0.8)
+      &:hover 
+         background: rgb(32, 66, 39)
+   &.active 
+      transform: translatey(0%)
+      opacity: 1
+      pointer-events: inherit
+.footer 
+   padding: 64px 0
+   &__left 
+      width: 100%
+      max-width: 227px
+   &__box 
+      align-items: flex-start
+   &__logo 
+      margin-bottom: 18px
+   &__socials 
+      a 
+         margin-right: 8px
+         &:last-child
+            margin-right: 0
+   &__area 
+      margin-bottom: 24px
+   &__info 
+      margin-bottom: 24px
+      a 
+         margin-top: 8px
+         display: block
+         color: rgba(240, 235, 230, 0.8)
+         font-size: 14px
+         font-weight: 400
+         line-height: 16px
+         &:hover 
+            color: rgb(240, 235, 230)
+      p 
+         color: rgba(240, 235, 230, 0.8)
+         font-size: 14px
+         font-weight: 400
+         line-height: 16px
+   &__com 
+      p 
+         margin-bottom: 10px
+         color: rgba(240, 235, 230, 0.6)
+         font-size: 14px
+         font-weight: 400
+         line-height: 16px
+   &__form 
+      margin-left: 115px
+      width: 100%
+      max-width: 279px 
+      position: relative
+      &:before 
+         content: ""
+         display: block
+         position: absolute
+         width: 100%
+         top: 32px
+         left: 0
+         height: 1px
+         background: rgba(240, 235, 230, 0.1)
+      form 
+         width: 100%
+         margin-top: 52px
+         input 
+            color: rgb(240, 235, 230)
+            font-size: 16px
+            font-weight: 400
+            width: 100%
+            line-height: 18px
+            padding-left: 5px
+            padding-bottom: 18px
+            background: transparent
+            border: none
+            border-bottom: 1px solid rgba(240, 235, 230, 0.2)
+            margin-bottom: 31px
+            &:focus
+               border-bottom: 1px solid rgb(240, 235, 230)
+         button 
+            width: 100%
+            height: 48px
+            padding-left: 24px
+            margin-bottom: 12px
+            margin-top: 10px
+            div
+               position: relative
+               top: 0.4px
+               width: 40px
+               height: 40px
+   &__policy
+      font-size: 12px
+      font-weight: 400
+      line-height: 14px
+      color: rgba(240, 235, 230, 0.8)
+      a 
+         color: rgb(240, 235, 230)
+         &:hover 
+            color: rgba(240, 235, 230, 0.8)
+   &__name 
+      color: rgb(240, 235, 230)
+      font-size: 20px
+      font-weight: 500
+      line-height: 22px
+   &__item 
+      position: relative
+      margin-left: 72px
+      &:before 
+         content: ""
+         display: block
+         position: absolute
+         width: 100%
+         top: 32px
+         left: 0
+         height: 1px
+         background: rgba(240, 235, 230, 0.1)
+         max-width: 137px
+      &:first-child
+         margin-left: 0
+      .footer__name 
+         margin-bottom: 28px
+      ul
+         li 
+            margin-bottom: 16px
+            &:last-child
+               margin-bottom: 0
+            a 
+               color: rgba(240, 235, 230, 0.8)
+               font-size: 16px
+               font-weight: 400
+               line-height: 18px
+               white-space: nowrap
+               &:hover 
+                  color: rgb(240, 235, 230)
+   &__content 
+      width: 100%
+      margin-left: auto
+      max-width: 591px
+   &__el 
+      margin-bottom: 20px
+      span 
+         margin-bottom: 10px
+         color: rgba(240, 235, 230, 0.6)
+         font-size: 16px
+         font-weight: 400
+         line-height: 18px
+      p 
+         color: rgb(240, 235, 230)
+         font-size: 16px
+         font-weight: 400
+         margin-top: 10px
+         line-height: 18px
+      a 
+         color: rgb(240, 235, 230)
+         font-size: 16px
+         font-weight: 400
+         line-height: 18px
+         &:hover 
+            color: rgba(240, 235, 230, 0.8)
+      &:last-child
+         margin-bottom: 0
+.main 
+   position: relative
+   background: url(/img/bg1.png) no-repeat center center / cover
+   padding: 128px 0 64px 
+   .container
+      position: relative
+   &__fig 
+      position: absolute
+      bottom: 0
+      left: 0
+      z-index: 2
+   h2 
+      margin-bottom: 40px
+   &__pag 
+      margin-top: 30px
+      position: relative
+      z-index: 3
+      align-items: center
+   .swiper-button-disabled
+      opacity: 0.5
+   .swiper1
+      overflow: hidden
+      .swiper-slide
+         height: 500px
+         a 
+            display: flex
+            flex-direction: column 
+            align-items: flex-start
+            position: relative
+            width: 100%
+            height: 100%
+            overflow: hidden
+            padding: 20px
+            img 
+               width: 100%
+               height: 100%
+               object-fit: cover 
+               position: absolute
+               top: 0
+               left: 0
+               z-index: -1
+            p 
+               color: rgb(240, 235, 230)
+               font-size: 24px
+               font-weight: 500
+               position: relative
+               z-index: 2
+               line-height: 26px
+            &:after 
+               content: ""
+               display: block
+               position: absolute
+               top: 0
+               left: 0
+               z-index: 0
+               width: 100%
+               height: 100%
+               background: linear-gradient(180.00deg, rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0) 25%,rgba(0, 0, 0, 0) 50%,rgba(0, 0, 0, 0) 75%,rgba(0, 0, 0, 0.5) 100%)
+.arrow 
+   transition: 0.5s 
+   cursor: pointer
+   position: relative
+   top: 0
+   right: 0
+   left: 0
+   bottom: 0
+   display: flex
+   align-items: center
+   justify-content: center
+   width: 56px
+   height: 56px
+   box-sizing: border-box
+   border: 1px solid rgba(240, 235, 230, 0.1)
+   border-radius: 100px
+   .svg 
+      path 
+         fill: rgb(240, 235, 230)
+   &:hover 
+      border: 1px solid rgb(240, 235, 230)
+      .svg 
+         path 
+            fill: rgb(240, 235, 230)
+.prev 
+   transform: rotate(180deg)
+.pag 
+   display: flex
+   width: max-content
+   justify-content: center
+   margin: 0 16px
+   position: relative
+   bottom: 0 !important
+   top: 0 !important
+   left: 0 !important
+   right: 0 !important
+   span 
+      color: rgb(240, 235, 230)
+      font-size: 16px
+      font-weight: 400
+      line-height: 18px
+.nature 
+   .container
+      width: 100%
+      height: 100%
+      display: flex
+   .swiper-slide
+      display: flex
+      flex-direction: column
+      img 
+         width: 100%
+         height: 100%
+         object-fit: cover
+         z-index: -1
+   &__box 
+      height: 784px
+      position: relative
+      display: flex
+      width: 100%
+      flex-direction: column
+   .swiper10 
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%   
+   .main__pag
+      margin-top: 0
+      width: 179px
+      height: 64px
+      justify-content: center
+      align-items: center
+      padding: 4px
+      border-radius: 100px
+      backdrop-filter: blur(32px)
+      background: rgba(43, 87, 52, 0.4)
+      .arrow .svg path 
+         fill: rgb(240, 235, 230)
+   .swiper-button-disabled
+      opacity: 0.5
+   .area__info
+      margin-top: auto
+      width: 100%
+      height: max-content
+      padding-bottom: 64px
+   .area__block
+      position: relative
+      overflow: hidden
+      img 
+         position: absolute
+         bottom: 0   
+         height: 100%
+         right: 0
+         z-index: 0
+      h3 
+         font-family: 'SangBleu Sunrise'
+         font-size: 32px
+         font-weight: 300
+         line-height: 36px
+         margin-top: 0
+         margin-bottom: 16px
+         color: rgb(240, 235, 230)
+         span 
+            color: rgba(240, 235, 230, 0.4)
+.area 
+   padding: 64px 0
+   position: relative
+   &__info 
+      justify-content: space-between
+      align-items: flex-end
+      position: relative
+      z-index: 2
+   &__block 
+      width: 535px
+      height: auto
+      padding: 24px
+      background: rgb(23, 56, 28)
+      color: rgba(240, 235, 230, 0.8)
+      font-size: 16px
+      font-weight: 400
+      line-height: 24px
+   .swip
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%   
+   .swiper-slide
+      a 
+         display: block
+         width: 100%
+         height: 100%
+         position: relative
+         img 
+            width: 100%
+            height: 100%
+            object-fit: cover
+            z-index: -1
+         &:after 
+            background: url(/img/view.svg) no-repeat center center
+            content: ""
+            display: block
+            position: absolute
+            top: 50%
+            left: 50%
+            margin-top: -24px
+            margin-left: -24px
+            width: 48px
+            height: 48px
+            transition: 0.5s
+            opacity: 0
+         &:hover
+            &:after 
+               opacity: 1
+   .main__pag
+      margin-top: 0
+      width: 179px
+      height: 64px
+      justify-content: center
+      align-items: center
+      padding: 4px
+      border-radius: 100px
+      backdrop-filter: blur(32px)
+      background: rgba(43, 87, 52, 0.4)
+      .arrow .svg path 
+         fill: rgb(240, 235, 230)
+   .swiper-button-disabled
+      opacity: 0.5
+.contacts 
+   background: url(/img/bg2.png) no-repeat center center / cover
+   padding: 128px 0 64px 
+   &__box 
+      align-items: flex-start
+      justify-content: space-between
+      img 
+         max-width: 646px
+         position: relative
+         z-index: 2
+         width: 100%
+         height: 600px
+         object-fit: cover 
+   &__content 
+      max-width: 610px
+      width: 100%
+   &__row 
+      align-items: flex-start
+      justify-content: space-between
+      width: 100%
+      &_1 
+         margin-bottom: 297px
+   &__item 
+      position: relative
+      z-index: 2
+      span
+         display: block
+         color: rgba(240, 235, 230, 0.6)
+         font-size: 16px
+         font-weight: 400
+         line-height: 18px
+         margin-bottom: 8px
+      p 
+         color: rgb(240, 235, 230)
+         font-size: 16px
+         font-weight: 400
+         line-height: 18px
+      a 
+         color: rgb(240, 235, 230)
+         font-size: 16px
+         font-weight: 400
+         line-height: 18px
+         &:hover 
+            color: white
+   h2 
+      margin: 0px 0 32px
+   .container 
+      position: relative
+   &__bg 
+      position: absolute
+      right: -134px
+      top: 95px
+      z-index: 0
+.tabs__nav
+   height: 64px
+   margin-bottom: 447px
+   justify-content: flex-start
+   align-items: center
+   padding: 8px
+   border-radius: 100px
+   backdrop-filter: blur(32px)
+   background: rgba(43, 87, 52, 0.8)
+   position: relative
+   z-index: 2
+   a 
+      display: flex
+      align-items: center
+      justify-content: center
+      width: max-content
+      padding: 0 24px 
+      border-radius: 0px
+      background: transparent
+      color: rgb(240, 235, 230)
+      font-size: 16px
+      font-weight: 400
+      line-height: 18px
+      height: auto
+      margin-right: 37px
+      border-right: 1px solid rgba(240, 235, 230, 0.4)
+      &.tabs__btn_active
+         color: rgb(23, 56, 28)
+         background: rgb(240, 235, 230)
+         border-right: none
+         height: 48px
+         border-radius: 100px
+      &:last-child
+         border-right: none
+         margin-right: 0
+      &:hover 
+         color: white
+.news 
+   padding: 128px 0 
+   background: url(/img/bg4.png) no-repeat center center / cover
+   h2 
+      span 
+         color: #2b5734
+   &-form 
+      width: 100%
+      position: relative
+      overflow: hidden
+      padding: 8px
+      display: flex
+      justify-content: space-between
+      align-items: flex-start
+      margin-bottom: 128px
+      background: url(/img/bg3.png) no-repeat center center / cover
+      &__bg 
+         position: absolute
+         width: 100%
+         height: 100%
+         z-index: -1
+         top: 0
+         left: 0
+      &__content 
+         padding: 32px
+      &__title 
+         margin-bottom: 144px
+         color: rgb(240, 235, 230)
+         font-size: 40px
+         font-weight: 500
+         line-height: 44px
+      &__text 
+         color: rgb(240, 235, 230)
+         font-size: 16px
+         font-weight: 400
+         line-height: 24px
+         width: 100%
+         max-width: 521px
+      &__wrap 
+         background: rgb(241, 235, 222)
+         padding: 51px 35px 32px
+         max-width: 416px
+         width: 100%
+   &__form 
+      width: 100%
+      input 
+         width: 100%
+         color: rgba(27, 30, 33, 0.8)
+         font-size: 16px
+         font-weight: 400
+         margin-bottom: 36px
+         padding-left: 3px
+         line-height: 18px
+         padding-bottom: 19px
+         border: none 
+         border-bottom: 1px solid rgba(27, 30, 33, 0.2)
+         background: transparent
+         &:focus 
+            border-bottom: 1px solid rgba(27, 30, 33, 0.8)
+      input::-webkit-input-placeholder 
+         color: rgba(27, 30, 33, 0.8) !important
+      input::-moz-placeholder
+         color: rgba(27, 30, 33, 0.8) !important
+      input:-ms-input-placeholder 
+         color: rgba(27, 30, 33, 0.8) !important
+      input:-moz-placeholder 
+         color: rgba(27, 30, 33, 0.8) !important
+      .custom-checkbox + label::before
+         width: 24px
+         border: none !important
+         height: 24px
+         max-width: 24px
+         background: url(/img/ch.svg) no-repeat center center
+         margin-right: 8px
+      .custom-checkbox:checked+label::before 
+         width: 24px
+         border: none !important
+         height: 24px
+         max-width: 24px
+         background: url(/img/check.svg) no-repeat 2px center
+      .custom-checkbox + label
+         color: rgb(27, 30, 33)
+         font-size: 14px
+         font-weight: 400
+         line-height: 16px
+         margin-top: -16px
+         margin-left: -3px
+      button 
+         width: 352px
+         height: 48px
+         border: 1px solid rgba(43, 87, 52, 0.4)
+         color: rgb(43, 87, 52)
+         font-size: 16px
+         font-weight: 400
+         line-height: 18px
+         padding: 0 4px 0 24px
+         margin-top: 40px
+         div 
+            width: 40px
+            height: 40px
+            background: rgba(43, 87, 52, 0.1)
+      .footer__policy
+         color: rgba(27, 30, 33, 0.6)
+         margin-top: 12px
+         a 
+            color: rgba(43, 87, 52, 0.8)
+            &:hover 
+               color: #000
+   h2 
+      margin-bottom: 64px
+      color: rgb(43, 87, 52)
+      font-size: 64px
+      font-weight: 300
+      line-height: 74px
+   &__box 
+      justify-content: flex-start 
+      flex-wrap: wrap 
+   &__item 
+      display: flex
+      align-items: flex-start
+      width: 32.3%
+      flex-direction: column
+      margin-right: 20px
+      margin-bottom: 40px
+      img 
+         width: 100%
+         object-fit: cover 
+         height: 238px
+         margin-bottom: 20px
+      h3 
+         margin-top: 0
+         color: rgb(27, 30, 33)
+         font-size: 20px
+         font-weight: 500
+         line-height: 22px
+         -webkit-line-clamp: 1
+         -webkit-box-orient: vertical
+         overflow: hidden
+         text-overflow: ellipsis
+         display: block
+         display: -webkit-box
+         transition: 0.5s
+         margin-bottom: 8px
+      p 
+         color: rgba(27, 30, 33, 0.6)
+         font-size: 16px
+         font-weight: 400
+         line-height: 18px
+         margin-bottom: 12px
+         -webkit-line-clamp: 2
+         -webkit-box-orient: vertical
+         overflow: hidden
+         text-overflow: ellipsis
+         display: block
+         display: -webkit-box
+      span 
+         color: rgba(43, 87, 52, 0.8)
+         font-size: 14px
+         font-weight: 500
+         line-height: 16px
+      &:nth-child(3n)
+         margin-right: 0
+      &:hover 
+         h3 
+            color: rgba(43, 87, 52, 0.8)
+   &__btn 
+      margin: 23px auto 0
+      width: 210px
+      height: 56px
+      border: 1px solid rgba(43, 87, 52, 0.4)
+      color: rgb(43, 87, 52)
+      font-size: 16px
+      div 
+         width: 48px
+         height: 48px
+         background: rgba(43, 87, 52, 0.1)
+         color: rgb(43, 87, 52)
+         font-size: 16px
+         font-weight: 400
+         line-height: 18px
+      &:hover 
+         background: #2b5734
+         color: #f0ebe6
+         border: 1px solid #2b5734
+         div 
+            color: #f0ebe6
+            background: rgba(240, 235, 230, 0.1)
+   &__see 
+      display: none
+      &.opened
+         display: flex !important
+label.error 
+   display: none !important
+input.error 
+   border-bottom: 1px solid rgb(222, 71, 71) !important
+.box-modal__close 
+   z-index: 10
+   cursor: pointer
+   position: absolute
+   top: 5px
+   right: 5px
+   cursor: pointer
+   fill: white
+   z-index: 20
+   transition: 0.5s
+   display: flex
+   align-items: center
+   justify-content: center
+   width: 50px
+   height: 50px
+   &:hover 
+      transition: 0.5s
+      transform: rotate(90deg)
+.box-modal 
+   position: relative
+.popup-call__box 
+   position: absolute
+   top: -18rem
+   left: 50%
+   height: auto
+   margin-left: -435px
+   overflow: hidden
+   height: max-content
+   transition: 0.5s all
+   width: 870px
+   height: auto
+   .swiper20
+      overflow: hidden
+      width: 423px
+      height: 100%
+      .swiper-slide
+         width: 100%
+         img 
+            width: 100%
+            height: 100%
+            object-fit: cover
+   .main__pag
+      position: absolute
+      bottom: 25px
+      left: 25px
+.popup 
+   display: none
+   position: absolute
+   right: 8px
+   top: 8px
+   width: 416px
+   height: 370px
+   padding: 32px
+   background: rgb(241, 235, 222)
+   &__txt 
+      color: rgba(240, 235, 230, 0.8)
+      font-size: 16px
+      font-weight: 400
+      line-height: 24px
+      margin-bottom: 20px
+   &__per 
+      color: rgba(240, 235, 230, 0.8)
+      font-size: 14px
+      font-weight: 400
+      line-height: 20px
+      margin-bottom: 40px
+   &__fig 
+      position: absolute
+      top: 0
+      right: 0
+      z-index: 0
+   &__pic 
+      width: 423px
+      height: 100%
+      object-fit: cover
+   &__content 
+      padding: 24px
+   &__name 
+      margin-bottom: 24px
+      color: rgb(240, 235, 230)
+      font-size: 24px
+      font-family: 'SangBleu Sunrise'
+      font-weight: 300
+      letter-spacing: -0.1rem
+      line-height: 35px
+      span 
+         color: rgba(240, 235, 230, 0.4)
+   &__wrap 
+      align-items: flex-start
+      background: url(/img/bg3.png) no-repeat center center / cover
+      .news__form 
+         position: relative
+         z-index: 3
+         button 
+            border: 1px solid rgba(240, 235, 230, 0.4)
+            color: rgb(240, 235, 230)
+            margin-top: 70px
+            div 
+               background: rgba(240, 235, 230, 0.1)
+               .svg 
+                  path 
+                     fill: rgb(240, 235, 230)
+         input 
+            color: rgba(240, 235, 230, 0.8)
+            border-bottom: 1px solid rgba(240, 235, 230, 0.8)
+            &:focus 
+               border-bottom: 1px solid rgb(240, 235, 230)
+         input::-webkit-input-placeholder 
+            color: rgba(240, 235, 230, 0.8) !important
+         input::-moz-placeholder
+            color: rgba(240, 235, 230, 0.8) !important
+         input:-ms-input-placeholder 
+            color: rgba(240, 235, 230, 0.8) !important
+         input:-moz-placeholder 
+            color: rgba(240, 235, 230, 0.8) !important
+      .footer__policy
+         color: rgba(240, 235, 230, 0.8)
+         a 
+            color: rgb(240, 235, 230) !important
+            &:hover 
+               opacity: 0.8
+#popup-thank 
+   .pop__text
+      color: rgba(240, 235, 230, 0.8)
+      margin-bottom: 60px
+   .pop__link 
+      color: rgba(240, 235, 230, 0.8)
+      border-bottom: 1px solid rgba(240, 235, 230, 0.8)
+      &:hover 
+         opacity: 0.8
+   .pop__time
+      color: rgba(240, 235, 230, 0.8)
+   .pop__fig
+      right: 0
+      left: inherit
+#popup-call2
+   .popup__name
+      margin-bottom: 50px
+#popup-call3 
+   .popup__txt
+      width: 100%
+      max-width: 423px
+   .popup__name
+      margin-bottom: 50px
+   .popup__fig
+      top: 28px
+   .arrow
+      width: 48px
+      border: 1px solid #f0ebe6
+      height: 48px
+   .popup-call__box
+      height: 445px
+.pop 
+   &__title 
+      color: rgb(43, 87, 52)
+      font-size: 24px
+      font-weight: 500
+      line-height: 26px
+      margin-bottom: 16px
+      position: relative
+      z-index: 2
+   &__text 
+      color: rgba(27, 30, 33, 0.6)
+      font-size: 16px
+      font-weight: 400
+      line-height: 18px
+      text-align: left
+      margin-bottom: 170px
+      position: relative
+      z-index: 2
+   &__link 
+      color: rgb(43, 87, 52)
+      font-size: 16px
+      font-weight: 500
+      line-height: 18px
+      border-bottom: 1px solid rgb(43, 87, 52)
+      margin-bottom: 18px
+      display: block
+      width: max-content
+      position: relative
+      z-index: 2
+      &:hover 
+         color: #000
+         border-bottom: 1px solid #000
+   &__time 
+      color: rgba(27, 30, 33, 0.4)
+      font-size: 14px
+      font-weight: 400
+      line-height: 16px
+      span 
+         margin-left: 5px
+         color: rgb(43, 87, 52)
+         font-size: 14px
+         font-weight: 500
+         line-height: 16px
+   &__fig 
+      z-index: 0
+      position: absolute
+      left: 0
+      top: 0
+   &__mob
+      display: none
+.sep 
+   background: url(/img/bg6.png) no-repeat center center / cover
+.pay 
+   padding: 64px 0
+   h2 
+      margin-bottom: 64px
+   &__wrap 
+      overflow: hidden
+      position: relative
+      padding: 8px
+      height: 578px
+      background: rgb(43, 87, 52)
+   &__fig 
+      position: absolute
+      top: 0
+      left: 0
+      z-index: 0
+   .tabs2 
+      padding: 32px
+   &__pic 
+      position: absolute
+      right: 8px
+      top: 8px
+      object-fit: cover 
+      width: 57.25%
+      height: 562px
+   .tabs__nav
+      width: 483px
+      margin-bottom: 58px
+      justify-content: space-between
+      backdrop-filter: blur(32px)
+      background: rgba(240, 235, 230, 0.1)
+      a 
+         width: 30%
+         margin-right: 0
+         padding: 0
+         border-right: none
+         position: relative
+         &:nth-child(2)
+            &:after 
+               content: ""
+               display: block
+               height: 18px
+               position: absolute
+               right: 0
+               top: 0
+               width: 1px
+               background: rgba(240, 235, 230, 0.4)
+            &:before 
+               content: ""
+               display: block
+               height: 18px
+               position: absolute
+               left: 0
+               top: 0
+               width: 1px
+               background: rgba(240, 235, 230, 0.4)
+   .tabs__btn_active
+      &:after, &:before
+         display: none !important
+   &__item 
+      margin-bottom: 32px
+   &__name 
+      color: rgb(240, 235, 230)
+      font-size: 16px
+      font-weight: 500
+      line-height: 18px
+      margin-bottom: 16px
+   &__text 
+      color: rgba(240, 235, 230, 0.8)
+      font-size: 14px
+      font-weight: 400
+      line-height: 16px
+   &__content 
+      width: 100%
+      max-width: 483px
+   &__btn
+      width: 483px
+      margin-top: 57px    
+      &:hover 
+         background: rgb(240, 235, 230)
+         div 
+            background: rgba(43, 87, 52, 0.1)
+   &__row 
+      justify-content: space-between
+      flex-wrap: wrap 
+      position: relative
+      z-index: 2
+      padding-bottom: 32px
+      border-bottom: 1px solid rgba(240, 235, 230, 0.2)
+   &__num 
+      font-family: 'SangBleu Sunrise'
+      font-weight: 300
+      font-size: 40px
+      font-feature-settings: 'pnum' on, 'onum' on
+      line-height: 44px
+      letter-spacing: -0.08em
+      span 
+         font-size: 24px
+         letter-spacing: 0.02em
+         line-height: 35px
+         margin-right: 0px
+   &__per 
+      margin-top: 8px
+      color: rgba(240, 235, 230, 0.8)
+      font-size: 16px
+      font-weight: 400
+      line-height: 18px
+   &__flex 
+      margin-top: 32px
+      position: relative
+      z-index: 2
+      justify-content: space-between
+   &__area 
+      width: 46%
+      span 
+         margin-bottom: 12px
+         color: rgb(240, 235, 230)
+         font-size: 16px
+         font-weight: 500
+         display: block
+         line-height: 18px
+      p 
+         color: rgba(240, 235, 230, 0.8)
+         font-size: 14px
+         font-weight: 400
+         line-height: 16px
+   .tabs__pane
+      &:nth-child(2)
+         .pay__btn
+            margin-top: 90px
+      &:nth-child(3)
+         .pay__row
+            padding-bottom: 20px
+            margin-bottom: 20px
+            &_2 
+               border-bottom: none
+         .pay__el 
+            width: 50%
+         .pay__btn
+            margin-top: 16px
+   &__title 
+      color: rgb(240, 235, 230)
+      font-size: 24px
+      font-weight: 500
+      line-height: 26px
+      margin-bottom: 12px
+   &__one 
+      color: rgba(240, 235, 230, 0.8)
+      font-size: 14px
+      font-weight: 400
+      line-height: 16px
+      margin-bottom: 32px
+.page 
+   .nav 
+      border-bottom: 1px solid rgba(240, 235, 230, 0.2)
+      background: rgb(23, 56, 28)
+   .policy-nav 
+      border-bottom: 1px solid rgba(27, 30, 33, 0.2)
+      background: rgb(241, 235, 222)
+      .nav__list li a
+         color: rgba(27, 30, 33, 0.8)
+      .nav__tel
+         color: rgb(27, 30, 33)
+.section 
+   position: relative
+   background: url(/img/page.png) no-repeat center center / cover
+   padding: 64px 0
+   h1 
+      font-size: 64px
+      line-height: 74px
+      margin-bottom: 40px
+.doc
+   &__row 
+      justify-content: flex-start
+      flex-wrap: wrap
+   &__item 
+      width: 32.3%
+      height: 120px
+      align-items: center
+      justify-content: space-between
+      padding: 32px
+      background: rgba(43, 87, 52, 0.8)
+      margin-bottom: 20px
+      margin-right: 20px
+      &:nth-child(3n) 
+         margin-right: 0
+      &:hover 
+         .doc__load
+            background: white 
+            .svg 
+               path 
+                  fill: $green
+   &__load
+      display: flex
+      align-items: center
+      justify-content: center
+      transition: 0.5s 
+      width: 56px
+      height: 56px
+      flex: 1 0 auto 
+      max-width: 56px
+      border: 1px solid rgba(240, 235, 230, 0.4)
+      border-radius: 100px
+   &__content 
+      width: 100%
+      max-width: 290px
+      p 
+         margin-bottom: 8px
+         color: rgb(240, 235, 230)
+         font-size: 20px
+         font-weight: 500
+         line-height: 22px
+      span 
+         color: rgba(240, 235, 230, 0.8)
+         font-size: 16px
+         font-weight: 400
+         line-height: 18px
+.policy 
+   background: url(/img/page2.png) no-repeat center center / cover
+   h1 
+      color: rgb(43, 87, 52)
+      font-size: 40px
+      line-height: 44px
+   &__box 
+      justify-content: space-between
+      align-items: flex-start
+   &__nav 
+      position: sticky 
+      top: 40px
+      width: 100%
+      max-width: 424px
+      li 
+         margin-bottom: 16px
+         a 
+            color: rgba(43, 87, 52, 0.8)
+            font-size: 16px
+            font-weight: 400
+            line-height: 18px
+            &:hover 
+               color: rgb(43, 87, 52)
+   &__content 
+      width: 100%
+      max-width: 848px
+   &__item 
+      margin-bottom: 48px
+      &:last-child
+         margin-bottom: 0
+   &__name 
+      color: rgb(43, 87, 52)
+      font-size: 24px
+      font-weight: 500
+      line-height: 26px
+      margin-bottom: 24px
+   &__text 
+      color: rgba(27, 30, 33, 0.8)
+      font-size: 16px
+      font-weight: 400
+      line-height: 24px
+.pol 
+   position: inherit
+   overflow: visible
+   section 
+      position: inherit
+      overflow: visible
+.cont 
+   .news-form
+      margin-bottom: 0 !important
+   .footer__socials
+      margin-bottom: 32px
+   h1 
+      font-size: 100px
+      line-height: 147px
+      margin: 92px 0 102px
+   .contacts__row_1
+      margin-bottom: 24px
+   &__btn 
+      width: 236px
+      height: 48px
+      font-size: 16px
+      padding-left: 24px
+      div 
+         width: 40px
+         height: 40px
+      &:hover 
+         background: #2b5734
+         color: #f0ebe6
+         border: 1px solid #2b5734
+         div 
+            color: #f0ebe6
+            background: rgba(240, 235, 230, 0.1)
+            .svg 
+               path
+                  fill: #f0ebe6
+   #map
+      width: 646px
+      height: 600px
+   .news__top
+      margin-top: 128px
+   [class*="ymaps-"][class*="-ground-pane"] 
+      filter: invert(85%)
+      -ms-filter: invert(85%)
+      -webkit-filter: invert(85%)
+      -moz-filter: invert(85%)
+      -o-filter: invert(85%)
+.info 
+   padding: 128px 0 64px
+   &__open 
+      display: none
+   &__box 
+      align-items: flex-start
+      justify-content: space-between
+      position: relative
+   &__pic 
+      position: absolute
+      right: -122px
+      bottom: -595px
+      z-index: 0
+   &__content 
+      width: 100%
+      max-width: 697px
+      h2 
+         margin-bottom: 24px
+         position: relative
+         z-index: 2
+   &__fig 
+      position: absolute
+      right: -57px
+      top: -81px
+      z-index: 0
+   &__text 
+      color: rgba(240, 235, 230, 0.8)
+      font-size: 16px
+      font-weight: 400
+      line-height: 24px
+      margin-bottom: 80px
+      position: relative
+      z-index: 2
+   &__row 
+      justify-content: space-between
+      flex-wrap: wrap 
+      position: relative
+      z-index: 2
+   &__item 
+      margin-bottom: 20px
+      align-items: center
+      width: 47%
+      p 
+         margin-left: 12px
+         color: rgba(240, 235, 230, 0.8)
+         font-size: 16px
+         font-weight: 400
+         line-height: 24px
+   &__area 
+      width: 100%
+      max-width: 535px
+   .swiper9 
+      overflow: hidden
+      width: 100%
+      .swiper-slide
+         width: 100%
+         height: 506px
+         img 
+            width: 100%
+            height: 100%
+            object-fit: cover
+.local 
+   background: rgb(250, 241, 225)
+   &__box 
+      align-items: center
+      justify-content: space-between
+   &__area 
+      position: relative
+      height: 843px
+      max-width: 710px 
+      margin-left: -65px
+      flex: 1 0 auto
+   &__pic 
+      width: 100%
+      height: 100%
+      object-fit: cover 
+   &__logo 
+      position: absolute
+      top: 111px
+      left: 251px
+      z-index: 2
+   &__block 
+      display: flex
+      align-items: center
+      width: max-content
+      height: 32px
+      border-radius: 100px
+      background: rgb(43, 87, 52)
+      padding: 0 12px
+      position: absolute
+      z-index: 2
+      p
+         color: rgb(240, 235, 230)
+         font-size: 14px
+         font-weight: 500
+         line-height: 16px
+         padding-right: 8.5px
+         margin-right: 7.5px
+         position: relative
+         &:after 
+            content: ""
+            display: block
+            position: absolute
+            right: 0
+            top: 3px
+            height: 10px
+            width: 1px
+            background: rgb(240, 235, 230)
+      span 
+         color: rgba(240, 235, 230, 0.8)
+         font-size: 14px
+         font-weight: 400
+         line-height: 16px
+      img 
+         margin-left: 5px
+      &_1 
+         top: 264px
+         left: 291px
+      &_2
+         bottom: 242px
+         left: 75px
+      &_3
+         bottom: 87px
+         right: 106px
+   &__content 
+      width: 100%
+      max-width: 586px
+   h2 
+      color: rgb(43, 87, 52)
+      width: 100%
+      padding-bottom: 32px
+      margin-bottom: 32px
+      border-bottom: 1px solid rgba(43, 87, 52, 0.1)
+      span 
+         color: rgba(43, 87, 52, 0.4)
+   &__text 
+      color: rgba(27, 30, 33, 0.8)
+      font-size: 16px
+      font-weight: 400
+      line-height: 24px
+      margin-bottom: 40px
+   &__per 
+      align-items: center
+      margin-bottom: 12px
+      color: rgb(27, 30, 33)
+      font-size: 16px
+      font-weight: 400
+      line-height: 18px
+      img 
+         margin-right: 10px
+   &__way 
+      display: block
+      width: max-content
+      color: rgb(43, 87, 52)
+      font-size: 16px
+      font-weight: 500
+      line-height: 18px
+      border-bottom: 1px solid rgb(43, 87, 52)
+      margin-bottom: 90px
+      &:hover 
+         color: rgb(27, 30, 33)
+         border-bottom: 1px solid rgb(27, 30, 33)
+   &__row 
+      justify-content: space-between
+      width: 91%
+   &__item 
+      .pay__num
+         color: rgb(27, 30, 33)
+         span 
+            margin-left: -3px
+            letter-spacing: -0.07em
+            display: inline-block
+      .pay__per
+         color: rgba(27, 30, 33, 0.6)
+         margin-top: 17px
+.plan 
+   padding: 128px 0 0
+   background: url(/img/plan.png) no-repeat center center / cover
+   h2 
+      margin-bottom: 64px
+      color: rgb(43, 87, 52)
+      font-size: 100px
+      font-weight: 300
+      line-height: 147px
+   &__box 
+      width: 100%
+      background: rgba(43, 87, 52, 0.1)
+      position: relative
+      height: 700px
+      p 
+         position: absolute
+         top: 50%
+         left: 50%
+         color: rgba(27, 30, 33, 0.4)
+         font-size: 24px
+         font-weight: 600
+         line-height: 18px
+         margin-left: -46px
+.tab-content
+   display: none 
+.tab-content.active
+   display: block 
+.sub-tab-content
+   display: none 
+.sub-tab-content.active
+   display: flex
+.lay 
+   background: url(/img/bg2.png) no-repeat center center / cover
+   padding: 64px 0 136px
+   &__btn 
+      &:hover 
+         background: rgb(240, 235, 230)
+         div 
+            background: rgba(43, 87, 52, 0.1)
+   .pay__wrap 
+      height: auto
+   h2 
+      margin-bottom: 64px
+   .tabs__nav
+      width: 483px
+      justify-content: space-between
+      backdrop-filter: blur(32px)
+      background: rgba(240, 235, 230, 0.1)
+      margin: 32px
+      button 
+         display: flex
+         align-items: center
+         justify-content: center
+         width: 33%
+         border-radius: 0px
+         background: transparent
+         color: rgb(240, 235, 230)
+         font-size: 16px
+         font-weight: 400
+         transition: 0.5
+         position: relative
+         border: none
+         line-height: 18px
+         height: auto
+         margin-right: 37px
+         &.active
+            color: rgb(23, 56, 28)
+            background: rgb(240, 235, 230)
+            border-right: none
+            height: 48px
+            border-radius: 100px
+         &:last-child
+            border-right: none
+            margin-right: 0
+         &:nth-child(2)
+            &:after 
+               content: ""
+               display: block
+               height: 18px
+               position: absolute
+               right: 0
+               top: 0
+               width: 1px
+               background: rgba(240, 235, 230, 0.4)
+            &:before 
+               content: ""
+               display: block
+               height: 18px
+               position: absolute
+               left: 0
+               top: 0
+               width: 1px
+               background: rgba(240, 235, 230, 0.4)
+            &.active 
+                &:after, &:before
+                  display: none !important
+   .tabs-btn
+      &:after, &:before
+         display: none !important
+   &__content 
+      width: 100%
+      max-width: 483px
+      margin: 0 32px 32px
+   &__row 
+      width: 100%
+      justify-content: space-between
+      align-items: flex-start
+      margin-bottom: 63px
+      padding: 0 40px
+   &__el
+      text-align: center
+      span 
+         color: rgb(240, 235, 230)
+         font-size: 64px
+         font-weight: 300
+         font-feature-settings: 'pnum' on, 'onum' on
+         line-height: 74px
+         font-family: 'SangBleu Sunrise'
+      p 
+         margin-top: 8px
+         color: rgba(240, 235, 230, 0.8)
+         font-size: 16px
+         font-weight: 400
+         line-height: 18px
+   &__text 
+      margin-bottom: 63px
+      color: rgba(240, 235, 230, 0.8)
+      font-size: 16px
+      font-weight: 400
+      line-height: 24px
+   &__flex 
+      align-items: flex-end
+      width: 100%
+      justify-content: space-between
+      p 
+         color: rgb(240, 235, 230)
+         font-weight: 300
+         font-family: 'SangBleu Sunrise'
+         font-size: 32px
+         font-feature-settings: 'pnum' on, 'onum' on
+         line-height: 36px
+         
+         span 
+            font-size: 64px
+            line-height: 74px
+   &__info 
+      width: 749px
+      height: 557px
+      padding: 32px
+      position: relative
+      z-index: 2
+      margin-top: -129px
+      background: rgb(241, 235, 222)
+      .tabs__nav
+         background: rgba(43, 87, 52, 0.8)
+         margin: 0 0 24px 
+         width: 100%
+         button
+            width: 33%
+   .tabs4, .tabs5, .tabs6, .tabs7
+      .tabs__btn 
+         width: 30%
+         position: relative
+         padding: 0
+         border: none
+         margin-right: 0
+         &:nth-child(2)
+            &:after 
+               content: ""
+               display: block
+               height: 18px
+               position: absolute
+               right: 0
+               top: 0
+               width: 1px
+               background: rgba(240, 235, 230, 0.4)
+            &:before 
+               content: ""
+               display: block
+               height: 18px
+               position: absolute
+               left: 0
+               top: 0
+               width: 1px
+               background: rgba(240, 235, 230, 0.4)
+         &_active 
+            &:after, &:before
+               display: none !important
+      .tabs__btn_active
+         color: #17381c
+         background: #f0ebe6
+         border-right: none
+         height: 48px
+         border-radius: 100px
+   .swiper-button-disabled
+      opacity: 0.5 !important
+   .lay__link
+      display: block
+      width: 100%
+      max-width: 557px
+      height: 325px
+      margin: 0 auto 24px
+      position: relative
+      img 
+         width: 100%
+         height: 100%
+         object-fit: cover
+      &:after 
+         background: url(/img/view2.svg) no-repeat center center
+         content: ""
+         display: block
+         position: absolute
+         top: 50%
+         left: 50%
+         margin-top: -29px
+         margin-left: -29px
+         width: 58px
+         height: 58px
+         transition: 0.5s
+         opacity: 0
+      &:hover
+         &:after 
+            opacity: 1
+   &__nav 
+      align-items: center
+      justify-content: center
+      p 
+         margin-right: 12px
+         color: rgb(23, 56, 28)
+         font-size: 16px
+         font-weight: 400
+         line-height: 18px
+      .sub-tab-btn, .sub-tab-btn2, .sub-tab-btn3
+         width: 56px
+         height: 56px
+         display: flex
+         justify-content: center
+         align-items: center
+         border: 1px solid rgba(43, 87, 52, 0.4)
+         border-radius: 100px
+         margin-left: 8px
+         color: rgb(23, 56, 28)
+         font-size: 16px
+         font-weight: 400
+         line-height: 18px
+         &.active 
+            background: rgb(43, 87, 52)
+            color: rgb(240, 235, 230)
+   .swip 
+      width: 100%
+      overflow: hidden
+      height: 407px
+      .swiper-slide
+         position: relative
+         width: 100%
+         cursor: pointer
+         height: 100%
+         img 
+            width: 100%
+            height: 100%
+            object-fit: cover
+         &:after 
+            background: url(/img/view2.svg) no-repeat center center
+            content: ""
+            display: block
+            position: absolute
+            top: 50%
+            left: 50%
+            margin-top: -29px
+            margin-left: -29px
+            width: 58px
+            height: 58px
+            transition: 0.5s
+            opacity: 0
+         &:hover
+            &:after 
+               opacity: 1
+   .main__pag
+      position: absolute
+      z-index: 3
+      align-items: center
+      bottom: 42px
+      left: 50%
+      margin-left: -85px
+      margin-top: 0
+      width: 179px
+      height: 64px
+      padding: 4px
+      border-radius: 100px
+      backdrop-filter: blur(32px)
+      background: rgba(43, 87, 52, 0.4)
+.sub-tab-content, .sub-tab-content2, .sub-tab-content3, .sub-tab-content4, .sub-tab-content5, .sub-tab-content6, .sub-tab-content7, .sub-tab-content8, .sub-tab-content9
+   display: none 
+.sub-tab-content.active, .sub-tab-content2.active, .sub-tab-content3.active, .sub-tab-content4.active, .sub-tab-content5.active, .sub-tab-content6.active, .sub-tab-content7.active, .sub-tab-content8.active, .sub-tab-content9.active
+   display: flex
+.news__top_lay
+   margin-bottom: 60px
+   padding: 60px 0
+   background: url(/img/plan2.png) no-repeat center center / cover
+   .news-form
+      margin-bottom: 0
+.layouts
+   padding-bottom: 40px
+   &__wrap 
+      position: relative
+      .tabs__nav_1 
+         position: absolute
+         top: -134px
+         right: -34px
+   .pay__wrap
+      overflow: visible
+   .lay__link
+      height: 268px
+      img 
+         object-fit: contain
+   .lay__info
+      height: 502px
+      margin-top: 0
+   .swip
+      height: 360px
+   .lay__text
+      margin-bottom: 90px
+   .lay__row
+      margin-bottom: 85px
+.area__info
+   .main__pag
+      margin-left: auto
+   &_lay
+      .area__block
+         width: 427px
+         overflow: visible
+         height: 118px
+         padding: 8px
+         background: rgb(240, 235, 230)
+         position: relative
+         justify-content: space-between
+      &:hover
+         .area__info_area:after
+            opacity: 1
+   &_close 
+      position: absolute
+      top: -17px
+      z-index: 2
+      right: -13px
+      border: none
+      border-radius: 100px
+      overflow: hidden
+      width: 32px
+      height: 32px
+      transition: 0.5s
+      &:hover 
+         opacity: 0.75
+   &_area 
+      position: relative
+      overflow: hidden
+      height: 102px 
+      width: 102px
+      img 
+         width: 100%
+         height: 100%
+         object-fit: cover
+      &:after 
+         background: url(/img/arrr.svg) no-repeat center center
+         content: ""
+         display: block
+         position: absolute
+         top: 50%
+         left: 50%
+         margin-top: -29px
+         margin-left: -29px
+         width: 58px
+         height: 58px
+         transition: 0.5s
+         opacity: 0
+      &:before
+         content: ""
+         display: block
+         position: absolute
+         top: 0
+         left: 0
+         width: 100%
+         height: 100%
+         background: rgba(0, 0, 0, 0.16)
+         transition: 0.5s
+         z-index: 1
+   &_content 
+      padding: 16px
+      span 
+         color: rgb(27, 30, 33)
+         font-size: 20px
+         font-weight: 500
+         line-height: 22px
+      p 
+         margin-top: 12px
+         color: rgba(27, 30, 33, 0.6)
+         font-size: 16px
+         font-weight: 400
+         line-height: 18px
+.contacts-lay 
+   padding-top: 0 !important
+.bb1, .bb2
+   display: none
+.layouts-item 
+   h1 
+      font-feature-settings: 'pnum' on, 'onum' on
+      span
+         font-size: 48px
+   .lay__text
+      margin-bottom: 28px
+   .lay__btn
+      width: 100%
+   .lay__info
+      height: 564px
+   .lay__link
+      height: 325px
+   .swip
+      height: 421px
+   &__top 
+      justify-content: space-between
+      align-items: flex-end
+      padding-top: 32px
+      margin-bottom: 30px
+   &__num 
+      margin-bottom: 12px 
+      color: rgb(240, 235, 230)
+      font-size: 24px
+      font-weight: 600
+      line-height: 26px
+   &__sum 
+      color: rgb(240, 235, 230)
+      font-size: 24px
+      font-weight: 400
+      line-height: 26px
+   &__text 
+      color: rgba(240, 235, 230, 0.8)
+      font-size: 14px
+      font-weight: 400
+      line-height: 16px
+   &__content 
+      padding: 20px 0 
+      margin-bottom: 30px
+      border-bottom: 1px solid rgba(240, 235, 230, 0.2)
+      border-top: 1px solid rgba(240, 235, 230, 0.2)
+      p 
+         color: rgba(240, 235, 230, 0.8)
+         font-size: 16px
+         font-weight: 400
+         line-height: 18px
+         margin-bottom: 16px
+         &:last-child
+            margin-bottom: 0
+      span
+         color: rgb(240, 235, 230)
+         font-size: 16px
+         margin-left: 5px
+         font-weight: 500
+         line-height: 18px
+.nature-lay
+   h2 
+      margin-bottom: 40px
+   &__wrap 
+      padding: 120px 0 
+      background: url(/img/bg1.png) no-repeat center center / cover
+   .container
+      flex-direction: column
+      align-items: flex-start
+   &__row 
+      justify-content: space-between
+      flex-wrap: wrap 
+   &__item 
+      width: 48.3%
+      margin-bottom: 40px
+      span 
+         display: block
+         width: 100%
+         padding-bottom: 20px 
+         margin-bottom: 20px
+         border-bottom: 1px solid rgba(240, 235, 230, 0.8)
+         color: rgb(240, 235, 230)
+         font-size: 20px
+         font-weight: 500
+         line-height: 22px
+      p 
+         margin-bottom: 12px
+         color: rgba(240, 235, 230, 0.8)
+         font-size: 16px
+         font-weight: 400
+         line-height: 18px
+         &:last-child
+            margin-bottom: 0
+.main2 
+   padding-top: 0 !important
+.sep 
+   .main2, .contacts-lay
+      background: transparent
+.another 
+   padding: 20px 0 120px
+   h2 
+      margin-bottom: 40px
+   &__box 
+      justify-content: space-between
+   &__item 
+      position: relative
+      overflow: hidden
+      display: flex
+      flex-direction: column 
+      align-items: flex-start
+      width: 32.3%
+      height: 407px
+      padding: 24px
+      background: rgb(32, 66, 39)
+      border: 2px solid rgb(32, 66, 39)
+      transition: 0.5s 
+      &:hover 
+         border: 2px solid rgba(240, 235, 230, 0.2)
+   &__per 
+      position: relative
+      width: 32.3%
+      padding: 32px
+      display: flex
+      flex-direction: column 
+      align-items: flex-start
+      overflow: hidden
+      h3 
+         margin-top: 0
+         margin-bottom: 12px
+         font-size: 24px
+         font-weight: 500
+         line-height: 26px
+         position: relative
+         z-index: 2
+         color: rgb(43, 87, 52)
+      p 
+         color: rgba(27, 30, 33, 0.6)
+         font-size: 16px
+         font-weight: 400
+         line-height: 18px
+         position: relative
+         z-index: 2
+      div
+         margin-top: auto
+         position: relative
+         z-index: 2
+         width: 56px
+         height: 56px
+         display: flex
+         justify-content: center
+         align-items: center
+         border: 1px solid rgba(43, 87, 52, 0.1)
+         border-radius: 100px
+         transition: 0.5s
+      &:hover
+         div
+            background: $green
+            .svg 
+               path 
+                  fill: white
+   &__bg 
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      object-fit: cover 
+      z-index: 0
+   .layouts-item__top
+      margin-bottom: 0
+      margin-top: 0
+      padding: 0
+      width: 100%
+   .layouts-item__num
+      font-size: 20px
+      line-height: 22px
+   .layouts-item__sum
+      font-size: 16px
+      line-height: 18px
+   &__pic 
+      position: absolute
+      top: 92px
+      left: 0
+      z-index: 0
+      width: 100%
+      height: 239px
+      object-fit: contain
+   &__area 
+      margin-top: auto
+   &__row 
+      justify-content: space-between
+   &__block 
+      align-items: center
+      justify-content: center
+      width: max-content
+      padding: 0 12px 
+      height: 32px
+      border-radius: 100px
+      background: rgb(23, 56, 28)
+      margin-right: 4px
+      span 
+         color: rgb(240, 235, 230)
+         font-size: 14px
+         font-weight: 400
+         line-height: 16px
+         display: inline-block
+         position: relative
+         margin-right: 16px
+         &:after 
+            content: ""
+            display: block
+            position: absolute
+            right: -9px
+            top: 4px
+            height: 10px
+            width: 1px
+            background: rgba(240, 235, 230, 0.4)
+      p 
+         color: rgba(240, 235, 230, 0.4)
+         font-size: 14px
+         font-weight: 400
+         line-height: 16px
+   &__link 
+      align-items: center
+      justify-content: center
+      width: 39px
+      height: 32px
+      border-radius: 100px
+      background: rgb(23, 56, 28)
+      color: rgb(240, 235, 230)
+      font-size: 14px
+      font-weight: 400
+      line-height: 16px
+      &:hover 
+         background: rgb(43, 87, 52)
+   &__info 
+      width: 201px
+      height: auto
+      padding: 4px
+      border-radius: 20px
+      background: rgb(23, 56, 28)
+      justify-content: flex-start
+      flex-wrap: wrap
+      margin-left: auto
+      position: relative
+      z-index: 2
+      margin-bottom: 10px
+      .another__block
+         background: rgb(32, 66, 39)
+         margin-bottom: 5px
+         &:last-child
+            margin-bottom: 0
+            width: 100%
+            margin-right: 0
+         &:nth-child(2)
+            margin-right: 0
+         span
+            &:after 
+               content: ""
+               display: block
+               position: absolute
+               right: -9px
+               top: 4px
+               height: 10px
+               width: 1px
+               background: rgba(240, 235, 230, 0.4)
+.news__top_lay2
+   margin-bottom: 0
+.lay-pay 
+   #tab3 
+      .pay__row
+         border-bottom: none
+         padding-top: 30px
+         padding-bottom: 0
+         border-top: 1px solid rgba(240, 235, 230, 0.2)
+      .lay-pay__pic
+         max-width: 39.99%
+      .pay__content
+         max-width: 725px
+   .pay__wrap
+      padding: 0 !important
+   &__row 
+      justify-content: space-between
+      padding: 32px
+   &__item 
+      width: 31.5%
+      position: relative
+      height: 142px
+      padding: 32px
+      border: 1px solid rgba(240, 235, 230, 0.2)
+      img 
+         margin-top: -62px
+         display: block
+         margin-bottom: 10px
+      h3 
+         margin-top: 0
+         margin-bottom: 12px
+         color: rgb(240, 235, 230)
+         font-size: 16px
+         font-weight: 500
+         line-height: 18px
+      p 
+         color: rgba(240, 235, 230, 0.8)
+         font-size: 14px
+         font-weight: 400
+         line-height: 16px
+   &__box 
+      position: relative
+   &__pic 
+      position: absolute
+      height: 100%
+      top: 0
+      right: 0
+      width: 100%
+      max-width: 49.4%
+   .pay__content
+      max-width: 602px
+      padding: 32px
+      padding-right: 0
+output 
+   background: #ff4500
+   padding: 5px 16px
+   border-radius: 3px
+   color: #fff
+input[type="number"] 
+   width: 40px
+   padding: 4px 5px
+   border: 1px solid #bbb
+   border-radius: 3px
+input[type="number"]:focus 
+   box-shadow: 0 0 3px 1px #4b81dd
+   outline: none
+input[type="range"] 
+   -webkit-appearance: none
+   position: relative
+   z-index: 3
+   width: 100%
+   height: 2px
+   background: rgba(27, 30, 33, 0.1)
+   border: none !important
+   border-radius: 10px
+   background-image: linear-gradient(rgb(43, 87, 52), rgb(43, 87, 52))
+   background-size: 0% 100%
+   background-repeat: no-repeat
+input[type="range"]::-webkit-slider-thumb 
+   -webkit-appearance: none
+   height: 16px
+   width: 16px
+   border-radius: 50%
+   background: url(/img/range.svg) no-repeat
+   cursor: ew-resize
+   box-shadow: 0 0 2px 0 #555
+   transition: background .3s ease-in-out
+input[type="range"]::-moz-range-thumb 
+   -webkit-appearance: none
+   height: 16px
+   width: 16px
+   border-radius: 50%
+   background: url(/img/range.svg) no-repeat
+   cursor: ew-resize
+   box-shadow: 0 0 2px 0 #555
+   transition: background .3s ease-in-out
+input[type="range"]::-ms-thumb 
+   -webkit-appearance: none
+   height: 20px
+   width: 20px
+   border-radius: 50%
+   background: #ff4500
+   cursor: ew-resize
+   box-shadow: 0 0 2px 0 #555
+   transition: background .3s ease-in-out
+input[type=range]::-webkit-slider-runnable-track  
+   -webkit-appearance: none
+   box-shadow: none
+   border: none
+   background: transparent
+input[type=range]::-moz-range-track 
+   -webkit-appearance: none
+   box-shadow: none
+   border: none
+   background: transparent
+input[type="range"]::-ms-track 
+   -webkit-appearance: none
+   box-shadow: none
+   border: none
+   background: transparent
+.calc 
+   margin-bottom: 120px
+   &__box 
+      justify-content: space-between
+   h2 
+      color: rgb(43, 87, 52)
+      margin-bottom: 40px
+   &__row 
+      justify-content: space-between
+      flex-wrap: wrap
+   &__item 
+      width: 100%
+      margin-bottom: 20px
+      &:nth-child(3), &:nth-child(4)
+         width: 45%
+   &__content 
+      width: 100%
+      max-width: 424px
+   &__name 
+      color: rgba(27, 30, 33, 0.4)
+      font-size: 12px
+      font-weight: 400
+      line-height: 14px
+      margin-bottom: 2px
+   &__area 
+      width: 100%
+      border: 1px solid rgba(27, 30, 33, 0.1)
+      max-width: 757px
+      justify-content: space-between
+      flex-wrap: wrap 
+   &__info 
+      width: 100%
+      margin-bottom: 5px
+      justify-content: space-between
+      align-items: flex-end
+      p 
+         &:first-child
+            color: rgb(27, 30, 33)
+            font-size: 16px
+            font-weight: 400
+            line-height: 18px
+         &:nth-child(2)
+            color: rgba(27, 30, 33, 0.4)
+            font-size: 12px
+            font-weight: 400
+            line-height: 14px
+   &__btn 
+      width: 100%
+      height: 48px
+      padding-left: 24px
+      border: 1px solid rgba(43, 87, 52, 0.4)
+      border-radius: 100px
+      color: rgb(43, 87, 52)
+      margin-top: 10px
+      div 
+         width: 40px
+         height: 40px
+         background: rgba(43, 87, 52, 0.1)
+         .svg 
+            path 
+               fill:  rgb(43, 87, 52)
+      &:hover 
+         background: #2b5734
+         color: #f0ebe6
+         border: 1px solid #2b5734
+         div
+            background: rgba(240, 235, 230, 0.1)
+            .svg 
+               path 
+                  fill: rgb(240, 235, 230)
+   &__block 
+      width: 50%
+      text-align: right
+      height: 148px
+      padding: 39px 32px 32px
+      &:nth-child(1), &:nth-child(2)
+         border-bottom: 1px solid rgba(27, 30, 33, 0.1)
+      &:nth-child(1), &:nth-child(3)
+         border-right: 1px solid rgba(27, 30, 33, 0.1)
+      p 
+         margin-bottom: 12px
+         font-weight: 300
+         font-size: 32px
+         line-height: 36px
+         font-feature-settings: 'pnum' on, 'onum' on
+         color: #1B1E21
+         font-family: 'SangBleu Sunrise'
+      span 
+         color: rgba(27, 30, 33, 0.6)
+         font-size: 16px
+         font-weight: 400
+         line-height: 18px
+   &__flex 
+      justify-content: space-between
+   &__per 
+      width: 24%
+      background: url(/img/col.png) no-repeat center center / cover
+      overflow: hidden
+      position: relative
+      display: flex
+      min-height: 372px
+      flex-direction: column 
+      align-items: flex-start
+      padding: 24px
+      img 
+         position: absolute
+         top: 0
+         left: 0
+   &__one 
+      margin-top: auto
+   &__top 
+      align-items: flex-end
+      p 
+         color: rgb(43, 87, 52)
+         font-family: 'SangBleu Sunrise'
+         font-feature-settings: 'pnum' on, 'onum' on
+         font-size: 32px
+         font-weight: 300
+         line-height: 36px
+         margin-right: 12px
+      span 
+         color: rgba(27, 30, 33, 0.4)
+         font-size: 16px
+         font-weight: 400
+         line-height: 18px
+   &__text 
+      margin-bottom: 24px
+      &:last-child
+         margin-bottom: 0
+      p 
+         color: rgba(27, 30, 33, 0.4)
+         font-size: 14px
+         font-weight: 400
+         line-height: 16px
+         margin-bottom: 8px
+      span 
+         color: rgb(27, 30, 33)
+         font-size: 16px
+         font-weight: 400
+         line-height: 18px
+
+
+                  
+         

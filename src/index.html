@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="date=no">
+	<meta name="format-detection" content="address=no">
+	<meta name="format-detection" content="email=no">
+	<!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" /> -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+
+	<title>ЯХРОМА</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<!-- Favicon -->
+	<!-- <link rel="icon" href="img/fav.png" type="image/x-icon">
+	<link rel="shortcut icon" href="img/fav.png" type="image/x-icon"> -->
+	<!-- OG -->
+	<meta property="og:locale" content="ru-Ru">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="">
+	<meta property="og:description" content="">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/vjik/arcticModal@master/arcticmodal/jquery.arcticmodal.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+
+</head>
+
+<body>
+	<h2 style="text-align: center; margin: 40px auto; color: white">
+		Pages
+	</h2>
+	<ul class="mm" style="display: flex; max-width: 800px; margin: 0 auto 50px; flex-wrap: wrap;">
+		<li style="width: 25%; margin: 0 auto 40px;">
+			<a href="main.html"
+				style="font-weight: bold; color: white; font-size: 25px; display: block; text-align: center;">Главная</a>
+		</li>
+		<li style="width: 25%; margin: 0 auto 40px;">
+			<a href="documents.html"
+				style="font-weight: bold; color: white; font-size: 25px; display: block; text-align: center;">Документы</a>
+		</li>
+		<li style="width: 25%; margin: 0 auto;">
+			<a href="policy.html"
+				style="font-weight: bold; color: white; font-size: 25px; display: block; text-align: center;">Политика</a>
+		</li>
+		<li style="width: 25%; margin: 0 auto;">
+			<a href="contacts.html"
+				style="font-weight: bold; color: white; font-size: 25px; display: block; text-align: center;">Контакты</a>
+		</li>
+		<li style="width: 25%; margin: 0 auto;">
+			<a href="layouts.html"
+				style="font-weight: bold; color: white; font-size: 25px; display: block; text-align: center;">Планировки</a>
+		</li>
+		<li style="width: 25%; margin: 0 auto;">
+			<a href="layouts-item.html"
+				style="font-weight: bold; color: white; font-size: 25px; display: block; text-align: center;">Планировка</a>
+		</li>
+		<li style="width: 25%; margin: 0 auto;">
+			<a href="pay.html"
+				style="font-weight: bold; color: white; font-size: 25px; display: block; text-align: center; line-height: 120%;">Способы
+				покупки</a>
+		</li>
+	</ul>
+	<div class="d-flex"
+		style="justify-content: center; margin-top: 80px; max-width: 1000px; margin: 0 auto; flex-wrap: wrap;">
+		<a href="#" class="btn btn_1 a1" style="margin: 20px;">
+			popup1 <div> <img src="img/right.svg" alt="" class="svg"> </div>
+		</a>
+		<a href="#" class="btn btn_2 a2" style="margin: 20px;">
+			popup2
+		</a>
+		<a href="#" class="btn btn_2 a3" style="margin: 20px;">
+			popup3
+		</a>
+	</div>
+	<div style="display:none;">
+		<div class="box-modal" id="popup-call">
+			<div class="popup-call__box">
+				<div class="box-modal__close articmodal-close">
+					<img src="img/close5.svg" alt="">
+				</div>
+				<div class="popup__wrap q">
+					<img src="img/pop1.png" alt="" class="popup__pic">
+					<div class="popup__content">
+						<p class="popup__name">
+							РАССКАЖЕМ О ДОМЕ
+						</p>
+						<img src="img/gg.svg" alt="" class="popup__fig">
+						<p class="popup__per">
+							Оставьте ваши контакты и мы обязательно <br>
+							с вами свяжемся
+						</p>
+						<form action="success.php" class="news__form  js-form2" id="popupResult2" method="post">
+							<input type="text" placeholder="Имя" name="name" class="form__field" required="">
+							<input type="tel" placeholder="Номер телефона" name="tel" class="tel form__field" required="">
+							<button type="submit" class="btn btn_2" data-submit2>
+								Отправить <div> <img src="img/right.svg" alt="" class="svg"> </div>
+							</button>
+							<p class="footer__policy">
+								Нажимая кнопку, вы подтверждаете свое согласие <br> на <a href="#"> обработку
+									персональных данных</a>
+							</p>
+						</form>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<div style="display:none;">
+		<div class="box-modal" id="popup-call2">
+			<div class="popup-call__box">
+				<div class="box-modal__close articmodal-close">
+					<img src="img/close5.svg" alt="">
+				</div>
+				<div class="popup__wrap q">
+					<img src="img/pop3.png" alt="" class="popup__pic">
+					<div class="popup__content">
+						<p class="popup__name">
+							МИР НОВЫХ <span> ВПЕЧАТЛЕНИЙ</span>
+						</p>
+						<img src="img/gg.svg" alt="" class="popup__fig">
+						<p class="popup__txt">
+							Изысканный уголок природы, где сливаются идеальные ландшафты и атмосфера спокойствия, создавая
+							уникальное пространство для любителей гольфа и ценителей красивого отдыха
+						</p>
+						<p class="popup__txt">
+							Но Dmitrov Golf Resort — это не только гольф. Курорт предлагает широкий спектр услуг и удобств для
+							отдыхая, что позволяет провести время с максимальным комфортом
+						</p>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<div style="display:none;">
+		<div class="box-modal" id="popup-call3">
+			<div class="popup-call__box">
+				<div class="box-modal__close articmodal-close">
+					<img src="img/close5.svg" alt="">
+				</div>
+				<div class="popup__wrap q">
+					<div class="main__pag q">
+						<div class="swiper-button-prev20 prev arrow">
+							<img src="img/right.svg" alt="" class="svg">
+						</div>
+						<div class="swiper-pagination20 pag"></div>
+						<div class="swiper-button-next20 arrow">
+							<img src="img/right.svg" alt="" class="svg">
+						</div>
+					</div>
+					<div class="swiper20 swip">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<img src="img/pop4.png" alt="">
+
+							</div>
+							<div class="swiper-slide">
+								<img src="img/pop4.png" alt="">
+
+							</div>
+							<div class="swiper-slide">
+								<img src="img/pop4.png" alt="">
+
+							</div>
+						</div>
+					</div>
+					<div class="popup__content">
+						<p class="popup__name">
+							ПОДВЕДЕНИЕ ГАЗА <br> В ПОСЕЛКЕ
+						</p>
+						<img src="img/gg.svg" alt="" class="popup__fig">
+						<p class="popup__txt">
+							Изысканный уголок природы, где сливаются идеальные ландшафты и атмосфера спокойствия, создавая
+							уникальное пространство для любителей гольфа и ценителей красивого отдыха
+						</p>
+						<p class="popup__txt">
+							Но Dmitrov Golf Resort — это не только гольф. Курорт предлагает широкий спектр услуг и удобств для
+							отдыхая, что позволяет провести время с максимальным комфортом
+						</p>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<div style="display:none;">
+		<div class="box-modal" id="popup-thank">
+			<div class="popup-call__box">
+				<div class="box-modal__close articmodal-close">
+					<img src="img/close5.svg" alt="">
+				</div>
+				<div class="popup__wrap q">
+					<img src="img/pop2.png" alt="" class="popup__pic">
+					<div class="popup__content">
+						<div class="pop__top">
+							<img src="img/gg.svg" alt="" class="pop__fig">
+							<p class="popup__name">
+								СПАСИБО ЗА ЗАЯВКУ
+							</p>
+							<p class="pop__text">
+								Наш менеджер свяжется с вами <br> в ближайшее время
+							</p>
+							<a href="#" class="pop__link">
+								Отправить повторно
+							</a>
+							<p class="pop__time">
+								это окно закроется автоматически
+							</p>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js?ver=5.1"></script>
+	<script src="js/all.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/vjik/arcticModal@master/arcticmodal/jquery.arcticmodal.js"></script>
+	<!-- Подключен файл-валидатор, для проверки формы на заполненность  -->
+	<script type="text/javascript"
+		src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.js"></script>
+</body>
+
+</html>

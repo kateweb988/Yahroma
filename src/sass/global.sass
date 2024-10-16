@@ -1,0 +1,154 @@
+body
+   font-family: 'Gilroy', sans-serif
+   background: rgb(23, 56, 28)
+   color: rgb(240, 235, 230)
+   font-weight: 400
+   font-size: 16px
+   line-height: 18px
+   cursor: url(/img/cursor.svg), auto !important
+a
+   text-decoration: none
+   box-sizing: border-box
+   transition: 0.5s !important
+.container
+   padding: 0 15px
+   max-width: 1339px
+   margin: 0 auto
+   @media ( max-width: 1199px )
+      max-width: 960px
+   @media (max-width: 991px)
+      max-width: 720px
+   @media (max-width: 767px)
+      max-width: 540px
+.d-flex, .q
+   display: flex
+.body-wrap
+   overflow: hidden
+   position: relative
+   display: flex
+   flex-direction: column
+   min-height: 100vh
+footer
+   margin-top: auto
+h1
+   color: rgb(240, 235, 230)
+   font-size: 128px
+   font-family: 'SangBleu Sunrise'
+   font-weight: 300 !important
+   line-height: 188px
+   letter-spacing: -0.3rem
+   margin: 0
+   text-transform: uppercase
+h2 
+   margin: 0
+   color: rgb(240, 235, 230)
+   font-size: 64px
+   font-family: 'SangBleu Sunrise'
+   font-weight: 300
+   line-height: 74px
+   letter-spacing: -0.3rem
+   text-transform: uppercase
+   span 
+      color: rgba(240, 235, 230, 0.4)
+ul 
+   margin: 0
+   padding: 0
+   list-style-type: none
+p
+   margin: 0
+.svg, rect, line, circle
+   transition: 0.5s ease
+a
+   transition: color 0.5s ease
+   box-sizing: border-box
+li
+   a
+      transition: color 0.5s ease
+button
+   cursor: pointer
+   box-sizing: border-box
+textarea
+   transition: border 0.5s
+   box-sizing: border-box
+   &:focus
+      transition: border 0.5s
+      outline: none
+      border: 1px solid $green
+input
+   transition: 0.5s
+   box-sizing: border-box
+   border: 1px solid #fff
+   &:disabled
+      pointer-events: none
+      opacity: 0.5
+   &:focus 
+      border: 1px solid $green 
+      transition: 0.5s
+   &:focus-visible
+      outline: initial
+path
+   transition: fill 0.5s, stroke 0.5s
+div 
+   box-sizing: border-box
+.icon 
+   transition: fill 0.5s, stroke 0.5s
+html * 
+   scrollbar-width: thin
+   scrollbar-color: blue $green
+.tabs__nav, .another__area, .calc__flex
+   scrollbar-width: thin
+   scrollbar-color: transparent transparent
+*::-webkit-scrollbar,
+html *::-webkit-scrollbar 
+   height: 7px
+   width: 7px
+*::-webkit-scrollbar-track,
+html *::-webkit-scrollbar-track 
+   background: #E7E7E7
+   border-radius: 3px
+*::-webkit-scrollbar-thumb,
+html *::-webkit-scrollbar-thumb 
+   background-color: $green
+   border-radius: 6px
+.btn 
+   display: flex
+   align-items: center
+   justify-content: space-between
+   transition: 0.5s
+   box-sizing: border-box
+   width: 190px
+   height: 56px
+   border: 1px solid rgba(240, 235, 230, 0.4)
+   border-radius: 100px
+   padding: 0 4px 0 32px
+   color: rgb(240, 235, 230)
+   font-size: 16px
+   font-weight: 400
+   line-height: 18px
+   div
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 48px
+      height: 48px
+      border-radius: 100px
+      background: rgba(240, 235, 230, 0.1)
+      transition: 0.5s
+   &:hover 
+      color: $green
+      background: white
+      .svg 
+         path 
+            fill: $green
+   &_2 
+      background: transparent
+      border: 1px solid rgba(240, 235, 230, 0.4)
+      &:hover 
+         background: rgb(43, 87, 52)
+         color: rgb(240, 235, 230)
+         border: 1px solid rgb(43, 87, 52)
+         div
+            background: rgba(240, 235, 230, 0.1)
+            .svg 
+               path 
+                  fill: rgb(240, 235, 230)

@@ -408,6 +408,18 @@ ul.info li
          font-size: 24px
          font-weight: 400
          line-height: 26px
+   progress 
+      position: absolute
+      bottom: 146px
+      left: 0
+      width: 100%
+      height: 4px
+      background: rgba(240, 235, 230, 0.2)
+      transform: matrix(1, 0, 0, -1, 0, 0)
+      &::-webkit-progress-value
+         background: #F0EBE6
+      &::-moz-progress-bar
+         background: #F0EBE6
 .socials 
    position: fixed
    bottom: 5% 
@@ -617,6 +629,7 @@ ul.info li
       bottom: 0
       left: 0
       z-index: 2
+      pointer-events: none
    h2 
       margin-bottom: 40px
    &__pag 
@@ -639,6 +652,7 @@ ul.info li
             height: 100%
             overflow: hidden
             padding: 20px
+            border: 2px solid transparent
             img 
                width: 100%
                height: 100%
@@ -654,6 +668,10 @@ ul.info li
                position: relative
                z-index: 2
                line-height: 26px
+            &:focus 
+               outline: none !important
+            &:hover 
+               border: 2px solid rgb(240, 235, 230)
             &:after 
                content: ""
                display: block
@@ -832,6 +850,12 @@ ul.info li
          fill: rgb(240, 235, 230)
    .swiper-button-disabled
       opacity: 0.5
+   .tabs__nav a
+      &:after
+         opacity: 1
+      &:hover 
+         &:after 
+            opacity: 0
 .contacts 
    background: url(/img/bg2.png) no-repeat center center / cover
    padding: 128px 0 64px 
@@ -902,26 +926,37 @@ ul.info li
       justify-content: center
       width: max-content
       padding: 0 24px 
-      border-radius: 0px
       background: transparent
       color: rgb(240, 235, 230)
       font-size: 16px
+      position: relative
+      border-radius: 100px
       font-weight: 400
+      border: 1px solid transparent
       line-height: 18px
-      height: auto
+      height: 48px
       margin-right: 37px
-      border-right: 1px solid rgba(240, 235, 230, 0.4)
+      &:after 
+         opacity: 0
       &.tabs__btn_active
          color: rgb(23, 56, 28)
          background: rgb(240, 235, 230)
-         border-right: none
-         height: 48px
-         border-radius: 100px
       &:last-child
-         border-right: none
          margin-right: 0
+         &:after 
+            display: none
       &:hover 
          color: white
+         border: 1px solid rgb(240, 235, 230)
+      &:after 
+         content: ""
+         display: block
+         height: 18px
+         position: absolute
+         right: 0
+         top: 14px
+         width: 1px
+         background: rgba(240, 235, 230, 0.4)
 .news 
    padding: 128px 0 
    background: url(/img/bg4.png) no-repeat center center / cover
@@ -1019,10 +1054,22 @@ ul.info li
          line-height: 18px
          padding: 0 4px 0 24px
          margin-top: 40px
+         p 
+            color: #2B5734
          div 
             width: 40px
             height: 40px
             background: rgba(43, 87, 52, 0.1)
+         &:hover
+            &:after 
+               background: rgb(43, 87, 52)
+            div
+               background: rgba(240, 235, 230, 0.1)
+               .svg 
+                  path 
+                     fill: #F0EBE6
+            p 
+               color: #F0EBE6
       .footer__policy
          color: rgba(27, 30, 33, 0.6)
          margin-top: 12px
@@ -1094,6 +1141,8 @@ ul.info li
       border: 1px solid rgba(43, 87, 52, 0.4)
       color: rgb(43, 87, 52)
       font-size: 16px
+      p 
+         color: #2B5734
       div 
          width: 48px
          height: 48px
@@ -1103,12 +1152,13 @@ ul.info li
          font-weight: 400
          line-height: 18px
       &:hover 
-         background: #2b5734
-         color: #f0ebe6
-         border: 1px solid #2b5734
          div 
             color: #f0ebe6
             background: rgba(240, 235, 230, 0.1)
+         &:after 
+            background: #2b5734
+         p 
+            color: #F0EBE6
    &__see 
       display: none
       &.opened
@@ -1162,6 +1212,10 @@ input.error
       position: absolute
       bottom: 25px
       left: 25px
+   .news__form
+      button 
+         p 
+            color: #f0ebe6
 .popup 
    display: none
    position: absolute
@@ -1202,6 +1256,7 @@ input.error
       font-weight: 300
       letter-spacing: -0.1rem
       line-height: 35px
+      text-transform: uppercase
       span 
          color: rgba(240, 235, 230, 0.4)
    &__wrap 
@@ -1357,6 +1412,8 @@ input.error
          padding: 0
          border-right: none
          position: relative
+         &:after 
+            display: none
          &:nth-child(2)
             &:after 
                content: ""
@@ -1364,7 +1421,9 @@ input.error
                height: 18px
                position: absolute
                right: 0
-               top: 0
+               opacity: 1
+               top: 14px
+               transition: 0.5s
                width: 1px
                background: rgba(240, 235, 230, 0.4)
             &:before 
@@ -1373,9 +1432,13 @@ input.error
                height: 18px
                position: absolute
                left: 0
-               top: 0
+               transition: 0.5s
+               top: 14px
                width: 1px
                background: rgba(240, 235, 230, 0.4)
+            &:hover 
+               &:after, &:before
+                  opacity: 0
    .tabs__btn_active
       &:after, &:before
          display: none !important
@@ -1399,7 +1462,6 @@ input.error
       width: 483px
       margin-top: 57px    
       &:hover 
-         background: rgb(240, 235, 230)
          div 
             background: rgba(43, 87, 52, 0.1)
    &__row 
@@ -1604,15 +1666,12 @@ input.error
          width: 40px
          height: 40px
       &:hover 
-         background: #2b5734
-         color: #f0ebe6
-         border: 1px solid #2b5734
          div 
             color: #f0ebe6
-            background: rgba(240, 235, 230, 0.1)
+            background: rgba(43, 87, 52, 0.1)
             .svg 
                path
-                  fill: #f0ebe6
+                  fill: #17381c
    #map
       width: 646px
       height: 600px
@@ -1834,10 +1893,26 @@ input.error
    background: url(/img/bg2.png) no-repeat center center / cover
    padding: 64px 0 136px
    &__btn 
-      &:hover 
+      position: relative
+      overflow: hidden
+      &:after 
+         content: ""
+         display: block
+         position: absolute
+         width: 0
+         left: 0
          background: rgb(240, 235, 230)
+         top: 0
+         height: 100%
+         opacity: 0
+         transition: 0.8s
+      &:hover 
+         background: transparent
          div 
             background: rgba(43, 87, 52, 0.1)
+         &:after 
+            opacity: 1
+            width: 100%
    .pay__wrap 
       height: auto
    h2 
@@ -1862,14 +1937,19 @@ input.error
          position: relative
          border: none
          line-height: 18px
-         height: auto
+         border: 1px solid transparent
+         transition: 0.5s
+         height: 48px
+         border-radius: 100px
          margin-right: 37px
+         &:hover 
+            border: 1px solid rgb(240, 235, 230)
+            &:after, &:before
+               opacity: 0
          &.active
             color: rgb(23, 56, 28)
             background: rgb(240, 235, 230)
             border-right: none
-            height: 48px
-            border-radius: 100px
          &:last-child
             border-right: none
             margin-right: 0
@@ -1880,16 +1960,18 @@ input.error
                height: 18px
                position: absolute
                right: 0
-               top: 0
+               transition: 0.5s
+               top: 14px
                width: 1px
                background: rgba(240, 235, 230, 0.4)
             &:before 
                content: ""
                display: block
+               transition: 0.5s
                height: 18px
                position: absolute
                left: 0
-               top: 0
+               top: 14px
                width: 1px
                background: rgba(240, 235, 230, 0.4)
             &.active 
@@ -1962,8 +2044,10 @@ input.error
       .tabs__btn 
          width: 30%
          position: relative
+         border-radius: 100px
          padding: 0
          border: none
+         border: 1px solid transparent
          margin-right: 0
          &:nth-child(2)
             &:after 
@@ -1972,7 +2056,8 @@ input.error
                height: 18px
                position: absolute
                right: 0
-               top: 0
+               top: 14px
+               opacity: 1
                width: 1px
                background: rgba(240, 235, 230, 0.4)
             &:before 
@@ -1981,18 +2066,22 @@ input.error
                height: 18px
                position: absolute
                left: 0
-               top: 0
+               top: 14px
                width: 1px
                background: rgba(240, 235, 230, 0.4)
+            &:hover 
+               &:after, &:before
+                  opacity: 0
          &_active 
             &:after, &:before
                display: none !important
+         &:hover 
+            border: 1px solid rgb(240, 235, 230)
       .tabs__btn_active
          color: #17381c
          background: #f0ebe6
          border-right: none
          height: 48px
-         border-radius: 100px
    .swiper-button-disabled
       opacity: 0.5 !important
    .lay__link
@@ -2313,7 +2402,7 @@ input.error
       border: 2px solid rgb(32, 66, 39)
       transition: 0.5s 
       &:hover 
-         border: 2px solid rgba(240, 235, 230, 0.2)
+         border: 2px solid #F0EBE6
    &__per 
       position: relative
       width: 32.3%
@@ -2634,8 +2723,9 @@ input[type="range"]::-ms-track
       padding-left: 24px
       border: 1px solid rgba(43, 87, 52, 0.4)
       border-radius: 100px
-      color: rgb(43, 87, 52)
       margin-top: 10px
+      p
+         color: #2B5734
       div 
          width: 40px
          height: 40px
@@ -2643,15 +2733,16 @@ input[type="range"]::-ms-track
          .svg 
             path 
                fill:  rgb(43, 87, 52)
-      &:hover 
-         background: #2b5734
-         color: #f0ebe6
-         border: 1px solid #2b5734
+      &:hover
+         &:after 
+            background: rgb(43, 87, 52)
          div
             background: rgba(240, 235, 230, 0.1)
             .svg 
                path 
-                  fill: rgb(240, 235, 230)
+                  fill: #F0EBE6
+         p 
+            color: #F0EBE6
    &__block 
       width: 50%
       text-align: right

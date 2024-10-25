@@ -8,15 +8,41 @@ document.addEventListener('DOMContentLoaded', function () {
     $('#popup-call').arcticmodal({
     });
   });
-  $('.a2').click(function (e) {
+  $('.a2, .link').click(function (e) {
     e.preventDefault();
     $('#popup-call2').arcticmodal({
+    });
+  });
+  $('.link2').click(function (e) {
+    e.preventDefault();
+    $('#popup-call22').arcticmodal({
+    });
+  });
+  $('.link3').click(function (e) {
+    e.preventDefault();
+    $('#popup-call33').arcticmodal({
+    });
+  });
+  $('.link4').click(function (e) {
+    e.preventDefault();
+    $('#popup-call44').arcticmodal({
     });
   });
   $('.a3').click(function (e) {
     e.preventDefault();
     $('#popup-call3').arcticmodal({
     });
+  });
+
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  const video = document.getElementById('videoId');
+  const progress = document.getElementById('progress');
+
+  video.addEventListener('timeupdate', () => {
+    const value = (video.currentTime / video.duration) * 100;
+    progress.value = value;
   });
 });
 document.addEventListener('DOMContentLoaded', function () {

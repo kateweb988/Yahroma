@@ -28,14 +28,37 @@ document.addEventListener('DOMContentLoaded', function () {
     $('#popup-call44').arcticmodal({
     });
   });
-  $('.a3').click(function (e) {
+  $('.a3, .info__item').click(function (e) {
     e.preventDefault();
     $('#popup-call3').arcticmodal({
     });
   });
 
 });
+document.addEventListener('DOMContentLoaded', function () {
+  const hoverArea = document.querySelector('.menu_block');
+  const targetBlock = document.querySelector('.menu2');
 
+  hoverArea.addEventListener('mouseenter', () => {
+    targetBlock.classList.add('active');
+  });
+
+  hoverArea.addEventListener('mouseleave', () => {
+    targetBlock.classList.remove('active');
+  });
+});
+document.addEventListener('DOMContentLoaded', function () {
+  const hoverArea = document.querySelector('.menu_block');
+  const targetBlock = document.querySelector('.menu-btn2');
+
+  hoverArea.addEventListener('mouseenter', () => {
+    targetBlock.classList.add('active');
+  });
+
+  hoverArea.addEventListener('mouseleave', () => {
+    targetBlock.classList.remove('active');
+  });
+});
 document.addEventListener('DOMContentLoaded', function () {
   const video = document.getElementById('videoId');
   const progress = document.getElementById('progress');
@@ -1668,14 +1691,14 @@ document.addEventListener("DOMContentLoaded", () => {
     menu.classList.toggle('active');
   });
 });
-document.addEventListener("DOMContentLoaded", () => {
-  let menuBtn2 = document.querySelector('.menu-btn2');
-  let menu2 = document.querySelector('.menu2');
-  menuBtn2.addEventListener('click', function () {
-    menuBtn2.classList.toggle('active');
-    menu2.classList.toggle('active');
-  });
-});
+// document.addEventListener("DOMContentLoaded", () => {
+//   let menuBtn2 = document.querySelector('.menu-btn2');
+//   let menu2 = document.querySelector('.menu2');
+//   menuBtn2.addEventListener('click', function () {
+//     menuBtn2.classList.toggle('active');
+//     menu2.classList.toggle('active');
+//   });
+// });
 // svg
 $(function () {
   jQuery('img.svg').each(function () {

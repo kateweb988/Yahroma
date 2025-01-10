@@ -356,7 +356,7 @@ ul.info li
          margin-right: 40px
          padding: 22px 0
          a 
-            color: rgba(240, 235, 230, 0.8)
+            color: rgb(240, 235, 230)
             font-size: 16px
             font-weight: 400
             line-height: 18px
@@ -367,7 +367,7 @@ ul.info li
          &.active
             border-bottom: 2px solid rgb(240, 235, 230) 
             a 
-              color: rgb(240, 235, 230) 
+              font-weight: 500
    &__tel 
       display: flex
       align-items: center
@@ -425,6 +425,11 @@ ul.info li
    bottom: 5% 
    right: 5%
    z-index: 5
+.menu_block 
+   position: relative
+   &:hover 
+      .menu-btn2 
+         background: rgb(32, 66, 39)
 .menu-btn2 
    width: 48px
    height: 48px
@@ -436,6 +441,14 @@ ul.info li
    background: rgb(43, 87, 52)
    transition: 0.5s 
    cursor: pointer
+   &:before 
+      content: ""
+      display: block
+      width: 48px
+      height: 20px
+      position: absolute
+      top: -7px
+      left: 0
    .per2 
       display: none
    &.active 
@@ -450,6 +463,8 @@ ul.info li
    pointer-events: none
    transition: 0.5s 
    transform: translatey(-10%)
+   position: absolute
+   top: -160px
    a 
       display: flex
       justify-content: center
@@ -487,14 +502,14 @@ ul.info li
       a 
          margin-top: 8px
          display: block
-         color: rgba(240, 235, 230, 0.8)
+         color: rgb(240, 235, 230)
          font-size: 14px
          font-weight: 400
          line-height: 16px
          &:hover 
-            color: rgb(240, 235, 230)
+            text-shadow: 0px 0px white
       p 
-         color: rgba(240, 235, 230, 0.8)
+         color: rgb(240, 235, 230)
          font-size: 14px
          font-weight: 400
          line-height: 16px
@@ -551,11 +566,12 @@ ul.info li
       font-size: 12px
       font-weight: 400
       line-height: 14px
-      color: rgba(240, 235, 230, 0.8)
+      color: rgb(240, 235, 230)
       a 
          color: rgb(240, 235, 230)
+         text-shadow: 0px 0px white
          &:hover 
-            color: rgba(240, 235, 230, 0.8)
+            text-shadow: inherit
    &__name 
       color: rgb(240, 235, 230)
       font-size: 20px
@@ -584,13 +600,13 @@ ul.info li
             &:last-child
                margin-bottom: 0
             a 
-               color: rgba(240, 235, 230, 0.8)
+               color: rgb(240, 235, 230)
                font-size: 16px
                font-weight: 400
                line-height: 18px
                white-space: nowrap
                &:hover 
-                  color: rgb(240, 235, 230)
+                  text-shadow: 0px 0px white
    &__content 
       width: 100%
       margin-left: auto
@@ -637,6 +653,8 @@ ul.info li
       position: relative
       z-index: 3
       align-items: center
+   .main__pag
+      justify-content: flex-end
    .swiper-button-disabled
       opacity: 0.5
    .swiper1
@@ -658,6 +676,7 @@ ul.info li
                height: 100%
                object-fit: cover 
                position: absolute
+               transition: 0.7s
                top: 0
                left: 0
                z-index: -1
@@ -671,7 +690,8 @@ ul.info li
             &:focus 
                outline: none !important
             &:hover 
-               border: 2px solid rgb(240, 235, 230)
+               img 
+                  transform: scale(1.15)
             &:after 
                content: ""
                display: block
@@ -799,7 +819,7 @@ ul.info li
       height: auto
       padding: 24px
       background: rgb(23, 56, 28)
-      color: rgba(240, 235, 230, 0.8)
+      color: rgb(240, 235, 230)
       font-size: 16px
       font-weight: 400
       line-height: 24px
@@ -906,8 +926,8 @@ ul.info li
       position: relative
    &__bg 
       position: absolute
-      right: -134px
-      top: 95px
+      right: 74px
+      top: 188px
       z-index: 0
 .tabs__nav
    height: 64px
@@ -1226,20 +1246,21 @@ input.error
    padding: 32px
    background: rgb(241, 235, 222)
    &__txt 
-      color: rgba(240, 235, 230, 0.8)
+      color: rgb(240, 235, 230)
       font-size: 16px
       font-weight: 400
       line-height: 24px
       margin-bottom: 20px
    &__per 
-      color: rgba(240, 235, 230, 0.8)
+      color: rgb(240, 235, 230)
       font-size: 14px
       font-weight: 400
       line-height: 20px
       margin-bottom: 40px
    &__fig 
       position: absolute
-      top: 0
+      top: inherit !important
+      bottom: 0
       right: 0
       z-index: 0
    &__pic 
@@ -1275,7 +1296,7 @@ input.error
                   path 
                      fill: rgb(240, 235, 230)
          input 
-            color: rgba(240, 235, 230, 0.8)
+            color: rgb(240, 235, 230)
             border-bottom: 1px solid rgba(240, 235, 230, 0.8)
             &:focus 
                border-bottom: 1px solid rgb(240, 235, 230)
@@ -1288,22 +1309,22 @@ input.error
          input:-moz-placeholder 
             color: rgba(240, 235, 230, 0.8) !important
       .footer__policy
-         color: rgba(240, 235, 230, 0.8)
+         color: rgb(240, 235, 230)
          a 
             color: rgb(240, 235, 230) !important
             &:hover 
                opacity: 0.8
 #popup-thank 
    .pop__text
-      color: rgba(240, 235, 230, 0.8)
+      color: rgb(240, 235, 230)
       margin-bottom: 60px
    .pop__link 
-      color: rgba(240, 235, 230, 0.8)
-      border-bottom: 1px solid rgba(240, 235, 230, 0.8)
+      color: rgb(240, 235, 230)
+      border-bottom: 1px solid rgb(240, 235, 230)
       &:hover 
          opacity: 0.8
    .pop__time
-      color: rgba(240, 235, 230, 0.8)
+      color: rgb(240, 235, 230)
    .pop__fig
       right: 0
       left: inherit
@@ -1378,13 +1399,22 @@ input.error
    background: url(/img/bg6.png) no-repeat center center / cover
 .pay 
    padding: 64px 0
+   &__banks 
+      align-items: center
+      margin-top: 25px
+      p 
+         margin-left: 10px
+         color: rgb(240, 235, 230)
+         font-size: 16px
+         font-weight: 500
+         line-height: 18px
    h2 
       margin-bottom: 64px
    &__wrap 
       overflow: hidden
       position: relative
       padding: 8px
-      height: 578px
+      height: 634px
       background: rgb(43, 87, 52)
    &__fig 
       position: absolute
@@ -1399,10 +1429,10 @@ input.error
       top: 8px
       object-fit: cover 
       width: 57.25%
-      height: 562px
+      height: 618px
    .tabs__nav
       width: 483px
-      margin-bottom: 58px
+      margin-bottom: 97px
       justify-content: space-between
       backdrop-filter: blur(32px)
       background: rgba(240, 235, 230, 0.1)
@@ -1451,7 +1481,7 @@ input.error
       line-height: 18px
       margin-bottom: 16px
    &__text 
-      color: rgba(240, 235, 230, 0.8)
+      color: rgb(240, 235, 230)
       font-size: 14px
       font-weight: 400
       line-height: 16px
@@ -1460,7 +1490,7 @@ input.error
       max-width: 483px
    &__btn
       width: 483px
-      margin-top: 57px    
+      margin-top: 73px    
       &:hover 
          div 
             background: rgba(43, 87, 52, 0.1)
@@ -1485,7 +1515,7 @@ input.error
          margin-right: 0px
    &__per 
       margin-top: 8px
-      color: rgba(240, 235, 230, 0.8)
+      color: rgb(240, 235, 230)
       font-size: 16px
       font-weight: 400
       line-height: 18px
@@ -1504,15 +1534,19 @@ input.error
          display: block
          line-height: 18px
       p 
-         color: rgba(240, 235, 230, 0.8)
+         color: rgb(240, 235, 230)
          font-size: 14px
          font-weight: 400
          line-height: 16px
    .tabs__pane
       &:nth-child(2)
          .pay__btn
-            margin-top: 90px
+            margin-top: 25px
       &:nth-child(3)
+         margin-top: -50px
+         .pay__banks
+            margin-top: -10px
+            margin-bottom: 28px
          .pay__row
             padding-bottom: 20px
             margin-bottom: 20px
@@ -1529,7 +1563,7 @@ input.error
       line-height: 26px
       margin-bottom: 12px
    &__one 
-      color: rgba(240, 235, 230, 0.8)
+      color: rgb(240, 235, 230)
       font-size: 14px
       font-weight: 400
       line-height: 16px
@@ -1709,7 +1743,7 @@ input.error
       top: -81px
       z-index: 0
    &__text 
-      color: rgba(240, 235, 230, 0.8)
+      color: rgb(240, 235, 230)
       font-size: 16px
       font-weight: 400
       line-height: 24px
@@ -1727,10 +1761,14 @@ input.error
       width: 47%
       p 
          margin-left: 12px
-         color: rgba(240, 235, 230, 0.8)
+         color: rgb(240, 235, 230)
          font-size: 16px
          font-weight: 400
          line-height: 24px
+         transition: 0.5s 
+      &:hover 
+         p 
+            color: #faf1e1
    &__area 
       width: 100%
       max-width: 535px
@@ -1792,7 +1830,7 @@ input.error
             width: 1px
             background: rgb(240, 235, 230)
       span 
-         color: rgba(240, 235, 230, 0.8)
+         color: rgb(240, 235, 230)
          font-size: 14px
          font-weight: 400
          line-height: 16px
@@ -2001,13 +2039,13 @@ input.error
          font-family: 'SangBleu Sunrise'
       p 
          margin-top: 8px
-         color: rgba(240, 235, 230, 0.8)
+         color: rgb(240, 235, 230)
          font-size: 16px
          font-weight: 400
          line-height: 18px
    &__text 
       margin-bottom: 63px
-      color: rgba(240, 235, 230, 0.8)
+      color: rgb(240, 235, 230)
       font-size: 16px
       font-weight: 400
       line-height: 24px
@@ -2322,7 +2360,7 @@ input.error
       font-weight: 400
       line-height: 26px
    &__text 
-      color: rgba(240, 235, 230, 0.8)
+      color: rgb(240, 235, 230)
       font-size: 14px
       font-weight: 400
       line-height: 16px
@@ -2332,7 +2370,7 @@ input.error
       border-bottom: 1px solid rgba(240, 235, 230, 0.2)
       border-top: 1px solid rgba(240, 235, 230, 0.2)
       p 
-         color: rgba(240, 235, 230, 0.8)
+         color: rgb(240, 235, 230)
          font-size: 16px
          font-weight: 400
          line-height: 18px
@@ -2372,7 +2410,7 @@ input.error
          line-height: 22px
       p 
          margin-bottom: 12px
-         color: rgba(240, 235, 230, 0.8)
+         color: rgb(240, 235, 230)
          font-size: 16px
          font-weight: 400
          line-height: 18px
@@ -2587,7 +2625,7 @@ input.error
          font-weight: 500
          line-height: 18px
       p 
-         color: rgba(240, 235, 230, 0.8)
+         color: rgb(240, 235, 230)
          font-size: 14px
          font-weight: 400
          line-height: 16px
@@ -2600,6 +2638,8 @@ input.error
       right: 0
       width: 100%
       max-width: 49.4%
+
+      object-fit: cover
    .pay__content
       max-width: 602px
       padding: 32px

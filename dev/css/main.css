@@ -437,7 +437,7 @@ input:-moz-placeholder {
   margin-right: 11px; }
 
 .custom-checkbox:checked + label::before {
-  background: url(/img/check2.png) no-repeat center center; }
+  background: url(../img/check2.png) no-repeat center center; }
 
 .swiper-pagination {
   display: flex;
@@ -547,7 +547,7 @@ input:-moz-placeholder {
   height: 5px;
   text-align: center;
   vertical-align: top;
-  background: url(/img/down-arrow.png) no-repeat !important;
+  background: url(../img/down-arrow.png) no-repeat !important;
   position: absolute;
   right: -16px;
   top: 8px; }
@@ -722,7 +722,7 @@ ul.info li {
   content: "";
   position: absolute;
   right: 0px;
-  background: url(/img/down-arrow.png) no-repeat !important;
+  background: url(../img/down-arrow.png) no-repeat !important;
   width: 7px;
   left: inherit;
   height: 5px;
@@ -735,7 +735,7 @@ ul.info li {
   content: "";
   position: absolute;
   right: 0px;
-  background: url(/img/down-arrow.png) no-repeat !important;
+  background: url(../img/down-arrow.png) no-repeat !important;
   width: 7px;
   left: inherit;
   height: 5px;
@@ -1071,7 +1071,7 @@ ul.info li {
 
 .main {
   position: relative;
-  background: url(/img/bg1.png) no-repeat center center/cover;
+  background: url(../img/bg1.png) no-repeat center center/cover;
   padding: 128px 0 64px; }
   .main .container {
     position: relative; }
@@ -1283,7 +1283,7 @@ ul.info li {
       object-fit: cover;
       z-index: -1; }
     .area .swiper-slide a:after {
-      background: url(/img/view.svg) no-repeat center center;
+      background: url(../img/view.svg) no-repeat center center;
       content: "";
       display: block;
       position: absolute;
@@ -1317,7 +1317,7 @@ ul.info li {
     opacity: 0; }
 
 .contacts {
-  background: url(/img/bg2.png) no-repeat center center/cover;
+  background: url(../img/bg2.png) no-repeat center center/cover;
   padding: 128px 0 64px; }
   .contacts__box {
     align-items: flex-start;
@@ -1421,7 +1421,7 @@ ul.info li {
 
 .news {
   padding: 128px 0;
-  background: url(/img/bg4.png) no-repeat center center/cover; }
+  background: url(../img/bg4.png) no-repeat center center/cover; }
   .news h2 span {
     color: #2b5734; }
   .news-form {
@@ -1433,7 +1433,7 @@ ul.info li {
     justify-content: space-between;
     align-items: flex-start;
     margin-bottom: 128px;
-    background: url(/img/bg3.png) no-repeat center center/cover; }
+    background: url(../img/bg3.png) no-repeat center center/cover; }
     .news-form__bg {
       position: absolute;
       width: 100%;
@@ -1490,14 +1490,14 @@ ul.info li {
       border: none !important;
       height: 24px;
       max-width: 24px;
-      background: url(/img/ch.svg) no-repeat center center;
+      background: url(../img/ch.svg) no-repeat center center;
       margin-right: 8px; }
     .news__form .custom-checkbox:checked + label::before {
       width: 24px;
       border: none !important;
       height: 24px;
       max-width: 24px;
-      background: url(/img/check.svg) no-repeat 2px center; }
+      background: url(../img/check.svg) no-repeat 2px center; }
     .news__form .custom-checkbox + label {
       color: #1b1e21;
       font-size: 14px;
@@ -1723,7 +1723,7 @@ input.error {
       color: rgba(240, 235, 230, 0.4); }
   .popup__wrap {
     align-items: flex-start;
-    background: url(/img/bg3.png) no-repeat center center/cover; }
+    background: url(../img/bg3.png) no-repeat center center/cover; }
     .popup__wrap .news__form {
       position: relative;
       z-index: 3; }
@@ -1849,7 +1849,7 @@ input.error {
   display: none; }
 
 .sep {
-  background: url(/img/bg6.png) no-repeat center center/cover; }
+  background: url(../img/bg6.png) no-repeat center center/cover; }
 
 .pay {
   padding: 64px 0; }
@@ -2031,7 +2031,7 @@ input.error {
 
 .section {
   position: relative;
-  background: url(/img/page.png) no-repeat center center/cover;
+  background: url(../img/page.png) no-repeat center center/cover;
   padding: 64px 0; }
   .section h1 {
     font-size: 64px;
@@ -2086,7 +2086,7 @@ input.error {
     line-height: 18px; }
 
 .policy {
-  background: url(/img/page2.png) no-repeat center center/cover; }
+  background: url(../img/page2.png) no-repeat center center/cover; }
   .policy h1 {
     color: #2b5734;
     font-size: 40px;
@@ -2357,7 +2357,7 @@ input.error {
 
 .plan {
   padding: 128px 0 0;
-  background: url(/img/plan.png) no-repeat center center/cover; }
+  background: url(../img/plan.png) no-repeat center center/cover; }
   .plan h2 {
     margin-bottom: 64px;
     color: #2b5734;
@@ -2392,7 +2392,7 @@ input.error {
   display: flex; }
 
 .lay {
-  background: url(/img/bg2.png) no-repeat center center/cover;
+  background: url(../img/bg2.png) no-repeat center center/cover;
   padding: 64px 0 136px; }
   .lay__btn {
     position: relative;
@@ -2590,7 +2590,7 @@ input.error {
       height: 100%;
       object-fit: cover; }
     .lay .lay__link:after {
-      background: url(/img/view2.svg) no-repeat center center;
+      background: url(../img/view2.svg) no-repeat center center;
       content: "";
       display: block;
       position: absolute;
@@ -2643,7 +2643,7 @@ input.error {
         height: 100%;
         object-fit: cover; }
       .lay .swip .swiper-slide:after {
-        background: url(/img/view2.svg) no-repeat center center;
+        background: url(../img/view2.svg) no-repeat center center;
         content: "";
         display: block;
         position: absolute;
@@ -2681,7 +2681,7 @@ input.error {
 .news__top_lay {
   margin-bottom: 60px;
   padding: 60px 0;
-  background: url(/img/plan2.png) no-repeat center center/cover; }
+  background: url(../img/plan2.png) no-repeat center center/cover; }
   .news__top_lay .news-form {
     margin-bottom: 0; }
 
@@ -2748,7 +2748,7 @@ input.error {
     height: 100%;
     object-fit: cover; }
   .area__info_area:after {
-    background: url(/img/arrr.svg) no-repeat center center;
+    background: url(../img/arrr.svg) no-repeat center center;
     content: "";
     display: block;
     position: absolute;
@@ -2862,7 +2862,7 @@ input.error {
 
 .nature-lay__wrap {
   padding: 120px 0;
-  background: url(/img/bg1.png) no-repeat center center/cover; }
+  background: url(../img/bg1.png) no-repeat center center/cover; }
 
 .nature-lay .container {
   flex-direction: column;
@@ -3162,7 +3162,7 @@ input[type="range"]::-webkit-slider-thumb {
   height: 16px;
   width: 16px;
   border-radius: 50%;
-  background: url(/img/range.svg) no-repeat;
+  background: url(../img/range.svg) no-repeat;
   cursor: ew-resize;
   box-shadow: 0 0 2px 0 #555;
   transition: background .3s ease-in-out; }
@@ -3172,7 +3172,7 @@ input[type="range"]::-moz-range-thumb {
   height: 16px;
   width: 16px;
   border-radius: 50%;
-  background: url(/img/range.svg) no-repeat;
+  background: url(../img/range.svg) no-repeat;
   cursor: ew-resize;
   box-shadow: 0 0 2px 0 #555;
   transition: background .3s ease-in-out; }
@@ -3299,7 +3299,7 @@ input[type="range"]::-ms-track {
     justify-content: space-between; }
   .calc__per {
     width: 24%;
-    background: url(/img/col.png) no-repeat center center/cover;
+    background: url(../img/col.png) no-repeat center center/cover;
     overflow: hidden;
     position: relative;
     display: flex;
@@ -4168,9 +4168,9 @@ input[type="range"]::-ms-track {
     top: -8px;
     z-index: 11;
     overflow: hidden;
-    background: url(/img/bur1.svg) no-repeat center center; }
+    background: url(../img/bur1.svg) no-repeat center center; }
   .page .policy-nav .menu-btn {
-    background: url(/img/bur3.svg) no-repeat center center; }
+    background: url(../img/bur3.svg) no-repeat center center; }
   .menu-btn span {
     width: 40px;
     display: none;
@@ -4247,7 +4247,7 @@ input[type="range"]::-ms-track {
     overflow: visible;
     position: fixed;
     right: 20px;
-    background: url(/img/bur2.svg) no-repeat center center !important;
+    background: url(../img/bur2.svg) no-repeat center center !important;
     top: 4px; }
   .menu-btn.active span:nth-of-type(1) {
     display: none; }
@@ -4326,9 +4326,9 @@ input[type="range"]::-ms-track {
   .news__form .custom-checkbox + label {
     color: rgba(240, 235, 230, 0.8); }
   .news__form .custom-checkbox:checked + label::before {
-    background: url(/img/check2.svg) no-repeat 2px center; }
+    background: url(../img/check2.svg) no-repeat 2px center; }
   .news__form .custom-checkbox + label::before {
-    background: url(/img/ch2.svg) no-repeat center center; }
+    background: url(../img/ch2.svg) no-repeat center center; }
   .news__form button {
     width: 100%;
     height: 48px;
@@ -4412,7 +4412,7 @@ input[type="range"]::-ms-track {
   .calc__item:nth-child(3), .calc__item:nth-child(4) {
     width: 100%; }
   .news__top_lay2 .tab-content.active {
-    background: url(/img/plan2.png) no-repeat center center/cover !important; }
+    background: url(../img/plan2.png) no-repeat center center/cover !important; }
   .calc {
     padding-top: 40px;
     padding-bottom: 40px;
@@ -4820,7 +4820,7 @@ input[type="range"]::-ms-track {
     font-size: 59px;
     line-height: 74px; }
   .cont {
-    background: url(/img/page.png) no-repeat -182px -578px/cover;
+    background: url(../img/page.png) no-repeat -182px -578px/cover;
     padding-bottom: 0; }
   .info__text {
     font-size: 14px;
@@ -5043,7 +5043,7 @@ input[type="range"]::-ms-track {
     .main .swiper1 .swiper-slide a p:after {
       content: "";
       display: inline-flex;
-      background: url(/img/go.svg) no-repeat center center;
+      background: url(../img/go.svg) no-repeat center center;
       width: 9px;
       height: 13px; }
   .main__fig {

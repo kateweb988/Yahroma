@@ -5554,3 +5554,6 @@ input[type="range"]::-ms-track {
     width: 30%; }
   .bb2 img {
     right: -60px !important; } }
+    .local__pic img {
+      width: 100%;
+    }
